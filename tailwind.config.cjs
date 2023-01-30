@@ -23,7 +23,7 @@ module.exports = {
         baseButton: '#e6e5e5',
         baseInput: '#ededed',
         baseCard: '#f3f2f2',
-        background: '#fafafa',        
+        background: '#fafafa',
       },
       fontFamily: {
         baloo2: ['"Baloo 2"', 'cursive'],
