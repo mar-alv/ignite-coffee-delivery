@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind utilities;
 @tailwind components;
+
+@layer base {
+input:not(:focus)[type='number']::-webkit-outer-spin-button,
+input:not(:focus)[type='number']::-webkit-inner-spin-button,
+input:not(:focus)[type='number'] {
+    margin: 0;
+    -webkit-appearance: none;
+    -moz-appearance: textfield !important;
+  }
+}

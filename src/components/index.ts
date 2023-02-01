@@ -1,3 +1,3 @@
-export { CoffeeCard } from './coffeeCard'
-export { CoffeeList } from './coffeeList'
-export { Header } from './header'
+export * from './checkout'
+export * from './common'
+export * from './home'

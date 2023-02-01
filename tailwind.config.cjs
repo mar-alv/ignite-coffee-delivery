@@ -28,6 +28,10 @@ module.exports = {
       fontFamily: {
         baloo2: ['"Baloo 2"', 'cursive'],
         roboto: ['"Roboto"', 'sans-serif']
+      },
+      gridTemplateColumns: {
+        row4th: '12.5rem 21.75rem',
+        row5th: '12.5rem 17.25rem 3.75rem',
       }
     },
   },

@@ -1,5 +1,6 @@
 import { Coffee } from '@interfaces'
-import { Minus, Plus, ShoppingCart } from 'phosphor-react'
+import { ShoppingCart } from 'phosphor-react'
+import { CoffeeAmountButtons } from '@components'
 
 interface Props {
   coffee: Coffee
@@ -37,18 +38,8 @@ export function CoffeeCard({ coffee }: Props) {
             {price}
           </span>
         </span>
-        <div className='bg-baseButton p-2 gap-1 rounded-md flex items-center'>
-          <button>
-            <Minus size={14} weight='fill' className='text-purple' />
-          </button>
-          <span className='text-baseTitle'>
-            1
-          </span>
-          <button>
-            <Plus size={14} weight='fill' className='text-purple' />
-          </button>
-        </div>
-        <button className='w-[2.375rem] h-[2.375rem] bg-purpleDark flex items-center justify-center rounded-md'>
+        <CoffeeAmountButtons />
+        <button className='w-[2.375rem] h-[2.375rem] bg-purpleDark flex items-center justify-center rounded-md hover:bg-purple'>
           <ShoppingCart size={22} className='text-baseCard' weight='fill' />
         </button>
       </footer>
