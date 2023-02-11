@@ -1,5 +1,5 @@
 import { Coffee } from '@interfaces'
-import { CheckoutCoffeeCard, CheckoutPaymentResume } from '@components'
+import { CheckoutCoffeeCard, CheckoutConfirmButton, CheckoutPaymentResume } from '@components'
 
 export function CheckoutSelectedCoffees() {
   // TODO: Get from context
@@ -44,6 +44,7 @@ export function CheckoutSelectedCoffees() {
       <div className='bg-baseCard p-10 mt-4 rounded-tl-md rounded-br-md rounded-tr-[2.25rem] rounded-bl-[2.25rem]'>
         {coffees.map(coffee=> <CheckoutCoffeeCard key={coffee.id} coffee={coffee} />)}
         <CheckoutPaymentResume />
+        <CheckoutConfirmButton />
       </div>
     </div>
   )

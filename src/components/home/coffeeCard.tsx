@@ -14,7 +14,7 @@ export function CoffeeCard({ coffee }: Props) {
       <img
         src={image}
         className='absolute -top-5 w-32 h-32'
-        alt={`Imagem ilustrativa da bebida ${coffee.name.toLocaleLowerCase()}`}
+        alt={`Imagem ilustrativa da bebida ${name.toLocaleLowerCase()}`}
       />
       <div className='mt-28 mb-4'>
         {tags.map(tag =>

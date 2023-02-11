@@ -6,7 +6,7 @@ export function Home() {
     <>
       <img
         src={intro}
-        className='w-[100%]'
+        className='w-full'
         alt='Imagem grande introduzindo as qualidades dos serviços prestados pela Coffee Delivery' />
       <CoffeeList />
     </>
