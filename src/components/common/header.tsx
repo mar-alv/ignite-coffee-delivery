@@ -15,6 +15,7 @@ export function Header() {
             Porto Alegre, RS
           </span>
         </div>
+        {/*TODO: Test layout when there are coffees in the cart*/}
         <Link to='/checkout' className='w-[2.375rem] h-[2.375rem] bg-yellowLight flex items-center justify-center rounded-md'>
           <ShoppingCart size={22} className='text-yellowDark' weight='fill' />
         </Link>

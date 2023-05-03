@@ -1,3 +1,4 @@
+// TODO: Add 12px gaps vertically between each div
 export function CheckoutPaymentResume() {
   return (
     <div className='font-roboto'>
