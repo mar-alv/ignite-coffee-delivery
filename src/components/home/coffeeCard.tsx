@@ -16,7 +16,7 @@ export function CoffeeCard({ coffee }: Props) {
         className='absolute -top-5 w-32 h-32'
         alt={`Imagem ilustrativa da bebida ${name.toLocaleLowerCase()}`}
       />
-      <div className='mt-28'>
+      <div className='flex mt-28 gap-1'>
         {tags.map(tag =>
           <span key={tag.id} className='bg-yellowLight rounded-full p-1 text-yellowDark text-[0.625rem] font-bold font-roboto'>
             {tag.description}
@@ -39,7 +39,7 @@ export function CoffeeCard({ coffee }: Props) {
           </span>
         </span>
         <CoffeeAmountButtons />
-        <button className='w-[2.375rem] h-[2.375rem] bg-purpleDark flex items-center justify-center rounded-md hover:bg-purple'>
+        <button className='w-[2.375rem] h-[2.375rem] bg-purpleDark flex items-center justify-center rounded-md hover:bg-purple transition duration-500 ease-out'>
           <ShoppingCart size={22} className='text-baseCard' weight='fill' />
         </button>
       </footer>

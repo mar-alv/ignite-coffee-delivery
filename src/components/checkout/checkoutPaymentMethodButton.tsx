@@ -32,7 +32,7 @@ export function CheckoutPaymentMethodButton({ onSelect, isSelected, paymentMetho
       onClick={handleSelect}
       className={clsx('bg-baseButton inline-flex p-4 rounded-md', {
         'bg-purpleLight border-solid border-2 border-purple': isSelected,
-        'hover:bg-baseHover hover:text-baseSubTitle focus:bg-baseHover focus:text-baseSubTitle': !isSelected
+        'hover:bg-baseHover hover:text-baseSubTitle focus:bg-baseHover focus:text-baseSubTitle transition duration-500 ease-out': !isSelected
       })}
     >
       {renderPaymenthMethodButtonIcon(id)}
