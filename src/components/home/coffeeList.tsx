@@ -7,9 +7,9 @@ export function CoffeeList() {
 
   return (
     <div className='px-[10%]'>
-      <header className='pt-8 mb-14 font-baloo2 text-[2rem] text-baseSubTitle font-extrabold'>
+      <h1 className='pt-8 mb-14 font-baloo2 text-[2rem] text-baseSubTitle font-extrabold'>
         Nossos cafés
-      </header>
+      </h1>
       <div className='grid grid-cols-4 gap-8'>
         {coffees.map(coffee => <CoffeeCard key={coffee.id} coffee={coffee} />)}
       </div>
