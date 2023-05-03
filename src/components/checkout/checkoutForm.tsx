@@ -18,15 +18,15 @@ export function CheckoutForm() {
         </div>
       </div>
       <div className='flex flex-col mt-8'>
-        <div className='mb-4'>
-          <Input placeholder='CEP' />
+        <Input placeholder='CEP' />
+        <div className='mt-4'>
+          <Input placeholder='Rua' />
         </div>
-        <Input placeholder='Rua' />
         <div className='grid grid-cols-row4th gap-3 my-4'>
           <Input type='number' placeholder='Número' />
           <Input placeholder='Complemento' />
         </div>
-        <div className='grid grid-cols-row5th gap-3 mb-4'>
+        <div className='grid grid-cols-row5th gap-3'>
           <Input placeholder='Bairro' />
           <Input placeholder='Cidade' />
           <Input placeholder='UF' />

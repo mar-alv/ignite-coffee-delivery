@@ -18,10 +18,10 @@ export function CheckoutCoffeeCard({ coffee }: Props) {
             alt={`Imagem ilustrativa da bebida ${name.toLocaleLowerCase()}`}
           />
           <div className='flex flex-col ml-5'>
-            <span className='text-baseSubTitle font-roboto mb-2'>
+            <span className='text-baseSubTitle font-roboto'>
               {name}
             </span>
-            <span className='inline-flex gap-2'>
+            <span className='inline-flex gap-2 mt-2'>
               <CoffeeAmountButtons />
               <CheckoutRemoveCoffeeButton />
             </span>

@@ -21,7 +21,7 @@ export function CheckoutPaymentMethodsList() {
   }
 
   return (
-    <div className='grid grid-cols-3 gap-3'>
+    <div className='grid grid-cols-3 gap-3 mt-8'>
       {paymentMethods.map(paymentMethod =>
         <CheckoutPaymentMethodButton
           key={paymentMethod.id}
