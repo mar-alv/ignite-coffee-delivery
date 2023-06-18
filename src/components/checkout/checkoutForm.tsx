@@ -18,20 +18,18 @@ export function CheckoutForm() {
           </div>
         </div>
       </div>
-      {/*FIXME: Adjust inputs length*/}
       <div className='flex flex-col mt-8'>
-        <Input placeholder='CEP' />
-        <div className='mt-4'>
-          <Input placeholder='Rua' />
-        </div>
-        <div className='grid grid-cols-row4th gap-3 my-4'>
-          <Input type='number' placeholder='Número' />
-          <Input placeholder='Complemento' />
+        <Input placeholder='CEP' className='w-[200px]' />
+        <Input placeholder='Rua' className='w-[560px] mt-4' />
+        <div className='grid grid-cols-row4th gap-3 my-4 relative'>
+          <Input type='number' placeholder='Número' className='w-[200px]' />
+          <Input placeholder='Complemento' className='w-[348px]' />
+          <p className='flex self-center absolute right-9 italic text-baseLabel text-xs font-roboto'>Opcional</p>
         </div>
         <div className='grid grid-cols-row5th gap-3'>
-          <Input placeholder='Bairro' />
-          <Input placeholder='Cidade' />
-          <Input placeholder='UF' />
+          <Input placeholder='Bairro' className='w-[200px]' />
+          <Input placeholder='Cidade' className='w-[276px]' />
+          <Input placeholder='UF' className='w-[60px]'/>
         </div>
       </div>
     </form>

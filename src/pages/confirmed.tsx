@@ -1,6 +1,7 @@
 import { CurrencyDollar, MapPin, Timer } from 'phosphor-react'
 import confirmedImage from '../assets/confirmedImage.png'
 
+// TODO: Get address from Context
 export function Confirmed() {
   return (
     <div className='flex flex-col mt-20 px-[10%]'>

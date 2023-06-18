@@ -1,7 +1,6 @@
-// TODO: Add 12px gaps vertically between each div
 export function CheckoutPaymentResume() {
   return (
-    <div className='font-roboto'>
+    <div className='font-roboto grid gap-3'>
       <div className="flex justify-between text-baseText text-sm">
         <p>Total de itens</p>
         <p>R$ 29,70</p>
