@@ -1,6 +1,8 @@
 import { Coffee } from '@interfaces'
-import { ShoppingCart } from 'phosphor-react'
 import { CoffeeAmountButtons } from '@components'
+import { CoffeeContext } from '@context'
+import { ShoppingCart } from 'phosphor-react'
+import { useContext, useState } from 'react'
 
 interface Props {
   coffee: Coffee
@@ -8,6 +10,23 @@ interface Props {
 
 export function CoffeeCard({ coffee }: Props) {
   const { name, tags, image, price, description } = coffee
+
+  const [amount, setAmount] = useState(1)
+
+  const { addToCart } = useContext(CoffeeContext)
+
+  function handleAddToCart() {
+    addToCart({ ...coffee, amount })
+  }
+
+  function handleDecreaseAmount() {
+    if (amount > 1)
+      setAmount(amount - 1)
+  }
+
+  function handleIncreaseAmount() {
+    setAmount(amount + 1)
+  }
 
   return (
     <div className='bg-baseCard w-64 p-5 flex justify-center relative flex-col items-center rounded-tl-md rounded-br-md rounded-tr-[2.25rem] rounded-bl-[2.25rem]'>
@@ -38,8 +57,12 @@ export function CoffeeCard({ coffee }: Props) {
             {price}
           </span>
         </span>
-        <CoffeeAmountButtons />
-        <button className='w-[2.375rem] h-[2.375rem] bg-purpleDark flex items-center justify-center rounded-md hover:bg-purple transition duration-500 ease-out'>
+        <CoffeeAmountButtons
+          amount={amount}
+          onDecreaseAmount={handleDecreaseAmount}
+          onIncreaseAmount={handleIncreaseAmount}
+        />
+        <button onClick={handleAddToCart} className='w-[2.375rem] h-[2.375rem] bg-purpleDark flex items-center justify-center rounded-md hover:bg-purple transition duration-500 ease-out'>
           <ShoppingCart size={22} className='text-baseCard' weight='fill' />
         </button>
       </footer>

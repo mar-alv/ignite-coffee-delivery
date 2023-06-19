@@ -18,9 +18,11 @@
     "baseUrl": "./src",
     "paths": {
       "@components": ["./components"],
+      "@context": ["./context"],
       "@enums": ["./enums"],
       "@interfaces": ["./interfaces"],
-      "@pages": ["./pages"]
+      "@pages": ["./pages"],
+      "@reducer": ["./reducer"],
     }
   },
   "include": ["src"],

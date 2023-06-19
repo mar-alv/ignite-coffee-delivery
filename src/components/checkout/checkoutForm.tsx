@@ -1,7 +1,6 @@
 import { Input } from '@components'
 import { MapPinLine } from 'phosphor-react'
 
-// FIXME: Form must occupy more space to the right
 export function CheckoutForm() {
   return (
     <form className='bg-baseCard mt-4 p-10 rounded-md'>

@@ -1,8 +1,11 @@
-import { CurrencyDollar, MapPin, Timer } from 'phosphor-react'
+import { CoffeeContext } from '@context'
 import confirmedImage from '../assets/confirmedImage.png'
+import { CurrencyDollar, MapPin, Timer } from 'phosphor-react'
+import { useContext } from 'react'
 
-// TODO: Get address from Context
 export function Confirmed() {
+  const { deliveryAddress, paymentMethod } = useContext(CoffeeContext)
+
   return (
     <div className='flex flex-col mt-20 px-[10%]'>
       <div>
@@ -22,11 +25,16 @@ export function Confirmed() {
               </div>
               <div className='text-baseText font-roboto'>
                 <p>
-                  Entrega em <b>Rua João Daniel Martinelli, 102</b>
+                  Entrega em <b>{deliveryAddress?.street}, {deliveryAddress?.number}, {deliveryAddress?.cep} </b>
                 </p>
                 <p>
-                  Farrapos - Porto Alegre, RS
+                  {deliveryAddress?.neighborhood} - {deliveryAddress?.city}, {deliveryAddress?.state}
                 </p>
+                {deliveryAddress?.complement && (
+                  <p>
+                    {deliveryAddress?.complement}
+                  </p>
+                )}
               </div>
             </div>
             <div className='flex items-center bg-background px-9 py-6'>
@@ -54,7 +62,7 @@ export function Confirmed() {
                 </p>
                 <p>
                   <b>
-                    Cartão de Crédito
+                    {paymentMethod?.description}
                   </b>
                 </p>
               </div>

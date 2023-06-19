@@ -2,9 +2,10 @@ import { CoffeeTag } from '@interfaces'
 
 export interface Coffee {
   id: number
-  name: string
+  amount?: number
+  description: string
   image: string
+  name: string
   price: string
   tags: CoffeeTag[]
-  description: string
 }

@@ -1,12 +1,24 @@
 import { Coffee } from '@interfaces'
+import { CoffeeContext } from '@context'
 import { CheckoutRemoveCoffeeButton, CoffeeAmountButtons } from '@components'
+import { useContext } from 'react'
 
 interface Props {
   coffee: Coffee
 }
 
 export function CheckoutCoffeeCard({ coffee }: Props) {
-  const { name, image, price } = coffee
+  const { id, amount, image, name, price } = coffee
+
+  const { decreaseAmountInCart, increaseAmountInCart } = useContext(CoffeeContext)
+
+  function handleDecreaseAmountInCart() {
+    decreaseAmountInCart(id)
+  }
+
+  function handleIncreaseAmountInCart() {
+    increaseAmountInCart(id)
+  }
 
   return (
     <div>
@@ -22,7 +34,11 @@ export function CheckoutCoffeeCard({ coffee }: Props) {
               {name}
             </span>
             <span className='inline-flex gap-2 mt-2'>
-              <CoffeeAmountButtons />
+              <CoffeeAmountButtons
+                amount={amount ?? 1}
+                onDecreaseAmount={handleDecreaseAmountInCart}
+                onIncreaseAmount={handleIncreaseAmountInCart}
+              />
               <CheckoutRemoveCoffeeButton />
             </span>
           </div>

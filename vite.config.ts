@@ -8,9 +8,11 @@ export default defineConfig({
   resolve: {
     alias: {
       '@components': path.resolve(__dirname, './src/components'),
+      '@context': path.resolve(__dirname, './src/context'),
       '@enums': path.resolve(__dirname, './src/enums'),
       '@interfaces': path.resolve(__dirname, './src/interfaces'),
-      '@pages': path.resolve(__dirname, './src/pages')
+      '@pages': path.resolve(__dirname, './src/pages'),
+      '@reducer': path.resolve(__dirname, './src/reducer'),
     },
   },
 })
