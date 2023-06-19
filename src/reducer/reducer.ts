@@ -59,7 +59,7 @@ export function coffeeReducer(state: CoffeeState, action: any) {
   }
   case ActionTypes.REMOVE_FROM_CART: {
     return produce(state, (draft) => {
-      draft.coffees.filter(coffee => coffee.id !== action.payload.coffeeId)
+      draft.coffees = draft.coffees.filter(coffee => coffee.id !== action.payload.coffeeId)
     })
   }
   case ActionTypes.SAVE_DELIVERY_ADDRESS: {

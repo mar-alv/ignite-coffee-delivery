@@ -39,7 +39,7 @@ export function CheckoutCoffeeCard({ coffee }: Props) {
                 onDecreaseAmount={handleDecreaseAmountInCart}
                 onIncreaseAmount={handleIncreaseAmountInCart}
               />
-              <CheckoutRemoveCoffeeButton />
+              <CheckoutRemoveCoffeeButton coffeeId={id} />
             </span>
           </div>
         </div>
