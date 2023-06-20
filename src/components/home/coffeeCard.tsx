@@ -15,6 +15,8 @@ export function CoffeeCard({ coffee }: Props) {
 
   const { addToCart } = useContext(CoffeeContext)
 
+  const coffeePrice = price.toFixed(2).toString().replace('.', ',')
+
   function handleAddToCart() {
     addToCart({ ...coffee, amount })
   }
@@ -54,7 +56,7 @@ export function CoffeeCard({ coffee }: Props) {
             R$
           </span>
           <span className='font-baloo2 text-2xl font-extrabold'>
-            {price}
+            {coffeePrice}
           </span>
         </span>
         <CoffeeAmountButtons

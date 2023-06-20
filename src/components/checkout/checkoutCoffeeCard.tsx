@@ -1,6 +1,7 @@
 import { Coffee } from '@interfaces'
 import { CoffeeContext } from '@context'
 import { CheckoutRemoveCoffeeButton, CoffeeAmountButtons } from '@components'
+import { toBrazillianCurrency } from '@utils'
 import { useContext } from 'react'
 
 interface Props {
@@ -9,6 +10,8 @@ interface Props {
 
 export function CheckoutCoffeeCard({ coffee }: Props) {
   const { id, amount, image, name, price } = coffee
+
+  const coffeePrice = toBrazillianCurrency(price)
 
   const { decreaseAmountInCart, increaseAmountInCart } = useContext(CoffeeContext)
 
@@ -44,7 +47,7 @@ export function CheckoutCoffeeCard({ coffee }: Props) {
           </div>
         </div>
         <span className='text-baseText font-bold'>
-          R$ {price}
+          {coffeePrice}
         </span>
       </div>
       <hr className='my-6 text-baseButton border-[1px] border-solid w-full' />

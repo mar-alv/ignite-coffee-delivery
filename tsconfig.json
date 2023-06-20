@@ -23,6 +23,7 @@
       "@interfaces": ["./interfaces"],
       "@pages": ["./pages"],
       "@reducer": ["./reducer"],
+      "@utils": ["./utils"]
     }
   },
   "include": ["src"],

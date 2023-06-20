@@ -1,7 +1,11 @@
+import { CoffeeContext } from '@context'
 import { Input } from '@components'
 import { MapPinLine } from 'phosphor-react'
+import { useContext } from 'react'
 
 export function CheckoutForm() {
+  const { deliveryAddress, paymentMethod, coffees } = useContext(CoffeeContext)
+
   return (
     <form className='bg-baseCard mt-4 p-10 rounded-md'>
       <div className='flex items-center'>

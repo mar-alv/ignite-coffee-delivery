@@ -1,33 +1,28 @@
-import { useState } from 'react'
-import { PaymentMethod } from '@interfaces'
 import { CheckoutPaymentMethodButton } from '@components'
+import { CoffeeContext } from '@context'
+import { PaymentMethod } from '@interfaces'
 import paymentMethodsJson from '../../paymentMethods.json'
+import { useContext } from 'react'
 
 export function CheckoutPaymentMethodsList() {
-  const [paymentMethods, setPaymentMethods] = useState<PaymentMethod[]>(paymentMethodsJson)
-  const [paymentMethodSelectedId, setPaymentMethodSelectedId] = useState<number | null | undefined>(null)
+  const { paymentMethod, choosePaymentMethod } = useContext(CoffeeContext)
+
+  const paymentMethods: PaymentMethod[] = paymentMethodsJson
 
   function handleSelect(paymentMethodId: number) {
-    const paymentMethodsAfterSelection = paymentMethods.map(paymentMethod => {
-      if (paymentMethod.id === paymentMethodId) {
-        paymentMethod.isSelected = true
-      }
+    const paymentMethodSelected = paymentMethods.find(method => method.id === paymentMethodId)!
 
-      return paymentMethod
-    })
-
-    setPaymentMethodSelectedId(paymentMethodId)
-    setPaymentMethods(paymentMethodsAfterSelection)
+    choosePaymentMethod(paymentMethodSelected)
   }
 
   return (
     <div className='grid grid-cols-3 gap-3 mt-8'>
-      {paymentMethods.map(paymentMethod =>
+      {paymentMethods.map(method =>
         <CheckoutPaymentMethodButton
-          key={paymentMethod.id}
+          key={method.id}
+          isSelected={method.id === paymentMethod?.id}
           onSelect={handleSelect}
-          paymentMethod={paymentMethod}
-          isSelected={paymentMethod.id === paymentMethodSelectedId}
+          paymentMethod={method}
         />
       )}
     </div>

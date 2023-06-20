@@ -6,6 +6,6 @@ export interface Coffee {
   description: string
   image: string
   name: string
-  price: string
+  price: number
   tags: CoffeeTag[]
 }
