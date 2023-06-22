@@ -1,9 +1,9 @@
 export interface DeliveryAddress {
-  cep: string
-  complement?: string
-  city: string
-  neighborhood: string
-  number: string
-  state: string
-  street: string
+  cep: string | undefined
+  city: string | undefined
+  complement?: string | undefined
+  neighborhood: string | undefined
+  number: string | undefined
+  state: string | undefined
+  street: string | undefined
 }

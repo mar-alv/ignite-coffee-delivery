@@ -1,10 +1,42 @@
 import { CoffeeContext } from '@context'
+import { DeliveryAddress } from '@interfaces'
 import { Input } from '@components'
 import { MapPinLine } from 'phosphor-react'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
+import { useForm } from 'react-hook-form'
 
 export function CheckoutForm() {
-  const { deliveryAddress, paymentMethod, coffees } = useContext(CoffeeContext)
+  const { deliveryAddress, saveDeliveryAddress } = useContext(CoffeeContext)
+
+  const defaultValues: DeliveryAddress = deliveryAddress ?? {
+    cep: '',
+    city: '',
+    complement: '',
+    neighborhood: '',
+    number: '',
+    state: '',
+    street: ''
+  }
+
+  const { register, watch } = useForm({ defaultValues })
+
+  useEffect(() => {
+    const subscription = watch((data) => {
+      const updatedDeliveryAddress: DeliveryAddress = {
+        cep: data.cep,
+        city: data.city,
+        complement: data.complement,
+        neighborhood: data.neighborhood,
+        number: data.number,
+        state: data.state,
+        street: data.street,
+      }
+
+      saveDeliveryAddress(updatedDeliveryAddress)
+    })
+
+    return () => subscription.unsubscribe()
+  }, [watch])
 
   return (
     <form className='bg-baseCard mt-4 p-10 rounded-md'>
@@ -22,17 +54,63 @@ export function CheckoutForm() {
         </div>
       </div>
       <div className='flex flex-col mt-8'>
-        <Input placeholder='CEP' className='w-[200px]' />
-        <Input placeholder='Rua' className='w-[560px] mt-4' />
+        <Input
+          name='cep'
+          register={register}
+          className='w-[200px]'
+          maxLength={8}
+          pattern='\d*'
+          placeholder='CEP'
+          required
+        />
+        <Input
+          name='street'
+          register={register}
+          className='w-[560px] mt-4'
+          placeholder='Rua'
+          required
+        />
         <div className='grid grid-cols-row4th gap-3 my-4 relative'>
-          <Input type='number' placeholder='Número' className='w-[200px]' />
-          <Input placeholder='Complemento' className='w-[348px]' />
-          <p className='flex self-center absolute right-9 italic text-baseLabel text-xs font-roboto'>Opcional</p>
+          <Input
+            name='number'
+            register={register}
+            className='w-[200px]'
+            maxLength={8}
+            pattern='\d*'
+            placeholder='Número'
+            type='number'
+            required
+          />
+          <Input
+            name='complement'
+            register={register}
+            className='w-[348px]'
+            placeholder='Complemento'
+          />
+          <p className='flex self-center absolute right-12 italic text-baseLabel text-xs font-roboto'>Opcional</p>
         </div>
         <div className='grid grid-cols-row5th gap-3'>
-          <Input placeholder='Bairro' className='w-[200px]' />
-          <Input placeholder='Cidade' className='w-[276px]' />
-          <Input placeholder='UF' className='w-[60px]'/>
+          <Input
+            name='neighborhood'
+            register={register}
+            className='w-[200px]'
+            placeholder='Bairro'
+            required
+          />
+          <Input
+            name='city'
+            register={register}
+            className='w-[276px]'
+            placeholder='Cidade'
+            required
+          />
+          <Input
+            name='state'
+            register={register}
+            className='w-[60px]'
+            placeholder='UF'
+            required
+          />
         </div>
       </div>
     </form>

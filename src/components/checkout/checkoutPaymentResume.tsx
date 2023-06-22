@@ -16,15 +16,15 @@ export function CheckoutPaymentResume() {
 
   return (
     <div className='font-roboto grid gap-3'>
-      <div className="flex justify-between text-baseText text-sm">
+      <div className='flex justify-between text-baseText text-sm'>
         <p>Total de itens</p>
         <p>{toBrazillianCurrency(coffeesPrice)}</p>
       </div>
-      <div className="flex justify-between text-baseText text-sm">
+      <div className='flex justify-between text-baseText text-sm'>
         <p>Entrega</p>
         <p>{toBrazillianCurrency(feePrice)}</p>
       </div>
-      <div className="flex justify-between text-baseSubTitle font-bold text-xl">
+      <div className='flex justify-between text-baseSubTitle font-bold text-xl'>
         <p>Total</p>
         <p>{toBrazillianCurrency(totalPrice)}</p>
       </div>

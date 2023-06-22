@@ -4,7 +4,11 @@ import { Link } from 'react-router-dom'
 import { useContext } from 'react'
 
 export function CheckoutConfirmButton() {
-  const { deliveryAddress, paymentMethod, coffees } = useContext(CoffeeContext)
+  const {
+    coffees,
+    deliveryAddress,
+    paymentMethod
+  } = useContext(CoffeeContext)
 
   const isDisabled = !deliveryAddress?.cep ||
                      !deliveryAddress?.city ||
@@ -17,11 +21,11 @@ export function CheckoutConfirmButton() {
 
   return (
     <Link
-      to='/confirmed'
-      className={clsx('w-full mt-6 flex justify-center bg-yellow rounded-md font-roboto font-bold text-sm py-3 px-2', {
+      className={clsx('w-full mt-6 flex justify-center bg-yellow rounded-md font-roboto font-bold text-sm py-3 px-2 transition duration-500 ease-out', {
         'bg-baseButton text-baseLabel cursor-not-allowed': isDisabled,
-        'hover:bg-yellowDark focus:bg-yellowDark transition duration-500 ease-out text-white': !isDisabled
+        'hover:bg-yellowDark focus:bg-yellowDark text-white': !isDisabled
       })}
+      to='/confirmed'
     >
       CONFIRMAR PEDIDO
     </Link>
