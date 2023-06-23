@@ -71,7 +71,7 @@ export function Confirmed() {
         </div>
         <img
           src={confirmedImage}
-          alt="Imagem média ilustrativa de um entregador indo levar a entrega até você"
+          alt='Imagem média ilustrativa de um entregador indo levar a entrega até você'
         />
       </div>
     </div>

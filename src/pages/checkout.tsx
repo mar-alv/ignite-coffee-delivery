@@ -1,4 +1,8 @@
-import { CheckoutForm, CheckoutPaymentMethods, CheckoutSelectedCoffees } from '@components'
+import {
+  CheckoutForm,
+  CheckoutPaymentMethods,
+  CheckoutSelectedCoffees
+} from '@components'
 
 export function Checkout() {
   return (
