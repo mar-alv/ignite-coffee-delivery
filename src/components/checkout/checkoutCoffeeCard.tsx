@@ -1,7 +1,7 @@
 import { Coffee } from '@interfaces'
 import { CoffeeContext } from '@context'
 import { CheckoutRemoveCoffeeButton, CoffeeAmountButtons } from '@components'
-import { toBrazillianCurrency } from '@utils'
+import { currencyUtils } from '@utils'
 import { useContext } from 'react'
 
 interface Props {
@@ -11,7 +11,7 @@ interface Props {
 export function CheckoutCoffeeCard({ coffee }: Props) {
   const { id, amount, image, name, price } = coffee
 
-  const coffeePrice = toBrazillianCurrency(price)
+  const coffeePrice = currencyUtils.toBrazillianCurrency(price)
 
   const { decreaseAmountInCart, increaseAmountInCart } = useContext(CoffeeContext)
 

@@ -1,1 +1,2 @@
-export { toBrazillianCurrency } from './currencyUtils'
+export { currencyUtils } from './currencyUtils'
+export { stringUtils } from './stringUtils'
