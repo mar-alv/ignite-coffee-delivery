@@ -1,9 +1,10 @@
 import { CoffeeContext } from '@context'
-import { DeliveryAddress } from '@interfaces'
+import { DeliveryAddress, ViaCepDeliveryAddress } from '@interfaces'
 import { Input } from '@components'
 import { MapPinLine } from 'phosphor-react'
 import { useContext, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
+import { stringUtils } from '@utils'
 
 export function CheckoutForm() {
   const { deliveryAddress, saveDeliveryAddress } = useContext(CoffeeContext)
@@ -18,7 +19,34 @@ export function CheckoutForm() {
     street: ''
   }
 
-  const { register, watch } = useForm({ defaultValues })
+  const { register, setValue, watch } = useForm({ defaultValues })
+
+  function fulfilFields(viaCepDeliveryAddress: ViaCepDeliveryAddress) {
+    setValue('city', viaCepDeliveryAddress.localidade)
+    setValue('neighborhood', viaCepDeliveryAddress.bairro)
+    setValue('state', viaCepDeliveryAddress.uf)
+    setValue('street', viaCepDeliveryAddress.logradouro)
+  }
+
+  useEffect(() => {
+    async function getCep() {
+      try {
+        const response = await fetch(`https://viacep.com.br/ws/${deliveryAddress?.cep}/json`)
+
+        const viaCepDeliveryAddress: ViaCepDeliveryAddress = await response.json()
+
+        if (!viaCepDeliveryAddress.erro)
+          fulfilFields(viaCepDeliveryAddress)
+      }
+      catch (error) {
+        setValue('cep', '')
+      }
+    }
+
+    if (stringUtils.isCepValid(deliveryAddress?.cep))
+      getCep()
+
+  },[deliveryAddress?.cep])
 
   useEffect(() => {
     const subscription = watch((data) => {

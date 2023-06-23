@@ -1,10 +1,23 @@
 import { CoffeeContext } from '@context'
 import confirmedImage from '../assets/confirmedImage.png'
 import { CurrencyDollar, MapPin, Timer } from 'phosphor-react'
+import { stringUtils } from '@utils'
 import { useContext } from 'react'
 
 export function Confirmed() {
-  const { deliveryAddress, paymentMethod } = useContext(CoffeeContext)
+  const { coffees, deliveryAddress, paymentMethod } = useContext(CoffeeContext)
+
+  const isTheDeliveryNotConfirmed = !deliveryAddress?.cep ||
+                                    !deliveryAddress?.city ||
+                                    !deliveryAddress?.neighborhood ||
+                                    !deliveryAddress?.number ||
+                                    !deliveryAddress?.state ||
+                                    !deliveryAddress?.street ||
+                                    !paymentMethod ||
+                                    !coffees.length
+
+  if (isTheDeliveryNotConfirmed)
+    return <></>
 
   return (
     <div className='flex flex-col mt-20 px-[10%]'>
@@ -18,7 +31,7 @@ export function Confirmed() {
       </div>
       <div className='flex mt-10 justify-between'>
         <div className='flex items-center bg-gradient-to-r from-yellow via-purpleLight to-purple rounded-tl-md rounded-br-md rounded-tr-[2.25rem] rounded-bl-[2.25rem]'>
-          <div className='flex flex-col px-1'>
+          <div className='flex flex-col p-1'>
             <div className='flex items-center bg-background px-9 py-6 rounded-tl-md rounded-tr-[2.25rem]'>
               <div className='bg-purple mr-3 p-2 rounded-full'>
                 <MapPin size={16} weight='fill' className='text-background' />
@@ -45,11 +58,9 @@ export function Confirmed() {
                 <p>
                   Previsão de entrega
                 </p>
-                <p>
-                  <b>
-                    20 min - 30 min
-                  </b>
-                </p>
+                <b>
+                  20 min - 30 min
+                </b>
               </div>
             </div>
             <div className='flex items-center bg-background px-9 py-6 rounded-br-md rounded-bl-[2.25rem]'>
@@ -60,11 +71,9 @@ export function Confirmed() {
                 <p>
                   Pagamento na entrega
                 </p>
-                <p>
-                  <b>
-                    {paymentMethod?.description}
-                  </b>
-                </p>
+                <b>
+                  {stringUtils.toCapitalize(paymentMethod?.description)}
+                </b>
               </div>
             </div>
           </div>

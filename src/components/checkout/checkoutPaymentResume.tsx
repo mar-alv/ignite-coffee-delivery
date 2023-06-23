@@ -1,5 +1,5 @@
 import { CoffeeContext } from '@context'
-import { toBrazillianCurrency } from '@utils'
+import { currencyUtils } from '@utils'
 import { useContext } from 'react'
 
 export function CheckoutPaymentResume() {
@@ -18,15 +18,15 @@ export function CheckoutPaymentResume() {
     <div className='font-roboto grid gap-3'>
       <div className='flex justify-between text-baseText text-sm'>
         <p>Total de itens</p>
-        <p>{toBrazillianCurrency(coffeesPrice)}</p>
+        <p>{currencyUtils.toBrazillianCurrency(coffeesPrice)}</p>
       </div>
       <div className='flex justify-between text-baseText text-sm'>
         <p>Entrega</p>
-        <p>{toBrazillianCurrency(feePrice)}</p>
+        <p>{currencyUtils.toBrazillianCurrency(feePrice)}</p>
       </div>
       <div className='flex justify-between text-baseSubTitle font-bold text-xl'>
         <p>Total</p>
-        <p>{toBrazillianCurrency(totalPrice)}</p>
+        <p>{currencyUtils.toBrazillianCurrency(totalPrice)}</p>
       </div>
     </div>
   )
