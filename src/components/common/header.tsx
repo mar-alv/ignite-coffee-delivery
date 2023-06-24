@@ -10,7 +10,7 @@ export function Header() {
   return(
     <header className='flex justify-between px-[10%] pt-8'>
       <Link to='/' className='focus:outline-none focus:ring-2 focus:ring-black'>
-        <img src={logo} alt='Logo pequeno da Coffee Delivery' className='focus:outline-none focus:ring-2 focus:ring-black' />
+        <img src={logo} alt='Logo pequeno da Coffee Delivery' />
       </Link>
       <span className='inline-flex gap-3'>
         <div className='p-2 rounded-md bg-purpleLight items-center'>
