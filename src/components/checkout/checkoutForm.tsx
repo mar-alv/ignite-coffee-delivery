@@ -115,7 +115,7 @@ export function CheckoutForm() {
             className='w-[348px]'
             placeholder='Complemento'
           />
-          <p className='flex self-center absolute right-12 italic text-baseLabel text-xs font-roboto'>Opcional</p>
+          <p className='flex self-center absolute right-4 italic text-baseLabel text-xs font-roboto'>Opcional</p>
         </div>
         <div className='grid grid-cols-row5th gap-3'>
           <Input

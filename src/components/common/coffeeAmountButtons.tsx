@@ -17,13 +17,13 @@ export function CoffeeAmountButtons({ amount, onDecreaseAmount, onIncreaseAmount
 
   return (
     <div className='bg-baseButton px-2 gap-1 rounded-md flex items-center'>
-      <button onClick={handleDecreaseAmount}>
+      <button className='focus:outline-none focus:ring-2 focus:ring-black' onClick={handleDecreaseAmount}>
         <Minus size={14} weight='fill' className='text-purple hover:text-purpleDark focus:text-purpleDark transition duration-500 ease-out' />
       </button>
       <span className='text-baseTitle'>
         {amount}
       </span>
-      <button onClick={handleIncreaseAmount}>
+      <button className='focus:outline-none focus:ring-2 focus:ring-black' onClick={handleIncreaseAmount}>
         <Plus size={14} weight='fill' className='text-purple hover:text-purpleDark focus:text-purpleDark transition duration-500 ease-out' />
       </button>
     </div>

@@ -47,7 +47,7 @@ export function CoffeeCard({ coffee }: Props) {
       <span className='text-baseSubTitle mt-4 text-xl font-bold font-baloo2'>
         {name}
       </span>
-      <span className='text-baseLabel mt-2 text-sm font-baloo2'>
+      <span className='text-baseLabel text-center mt-2 text-sm font-baloo2'>
         {description}
       </span>
       <footer className='flex gap-2 mt-8'>
@@ -64,7 +64,7 @@ export function CoffeeCard({ coffee }: Props) {
           onDecreaseAmount={handleDecreaseAmount}
           onIncreaseAmount={handleIncreaseAmount}
         />
-        <button onClick={handleAddToCart} className='w-[2.375rem] h-[2.375rem] bg-purpleDark flex items-center justify-center rounded-md hover:bg-purple transition duration-500 ease-out'>
+        <button onClick={handleAddToCart} className='focus:outline-none focus:ring-2 focus:ring-black w-[2.375rem] h-[2.375rem] bg-purpleDark flex items-center justify-center rounded-md hover:bg-purple transition duration-500 ease-out'>
           <ShoppingCart size={22} className='text-baseCard' weight='fill' />
         </button>
       </footer>
