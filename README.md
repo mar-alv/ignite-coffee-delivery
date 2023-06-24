@@ -8,3 +8,6 @@ My implementation of the challenge project "Coffee Delivery" proposed in the Rea
 * ReactJs with Typescript, React Hook Form and React Router Dom
 * Vite
 * Tailwind CSS with immer and clsx
+
+## Video Demonstration
+https://www.linkedin.com/feed/update/urn:li:ugcPost:7078453637634506752/
