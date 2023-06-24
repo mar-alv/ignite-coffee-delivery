@@ -5,19 +5,7 @@ import { stringUtils } from '@utils'
 import { useContext } from 'react'
 
 export function Confirmed() {
-  const { coffees, deliveryAddress, paymentMethod } = useContext(CoffeeContext)
-
-  const isTheDeliveryNotConfirmed = !deliveryAddress?.cep ||
-                                    !deliveryAddress?.city ||
-                                    !deliveryAddress?.neighborhood ||
-                                    !deliveryAddress?.number ||
-                                    !deliveryAddress?.state ||
-                                    !deliveryAddress?.street ||
-                                    !paymentMethod ||
-                                    !coffees.length
-
-  if (isTheDeliveryNotConfirmed)
-    return <></>
+  const { deliveryAddress, paymentMethod } = useContext(CoffeeContext)
 
   return (
     <div className='flex flex-col mt-20 px-[10%]'>

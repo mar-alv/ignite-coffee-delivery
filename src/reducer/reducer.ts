@@ -37,6 +37,11 @@ export function coffeeReducer(state: CoffeeState, action: any) {
       draft.paymentMethod = action.payload.paymentMethod
     })
   }
+  case ActionTypes.CONFIRM_DELIVERY: {
+    return produce(state, (draft) => {
+      draft.coffees = []
+    })
+  }
   case ActionTypes.DECREASE_AMOUNT_IN_CART: {
     return produce(state, (draft) => {
       draft.coffees.map(coffee => {

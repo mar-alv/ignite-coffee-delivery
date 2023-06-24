@@ -1,5 +1,6 @@
 export {
   addToCartAction,
+  confirmDeliveryAction,
   choosePaymentMethodAction,
   decreaseAmountInCartAction,
   increaseAmountInCartAction,
