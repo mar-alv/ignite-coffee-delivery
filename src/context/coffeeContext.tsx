@@ -7,6 +7,7 @@ import {
 import {
   addToCartAction,
   choosePaymentMethodAction,
+  confirmDeliveryAction,
   coffeeReducer,
   decreaseAmountInCartAction,
   increaseAmountInCartAction,
@@ -20,6 +21,7 @@ interface CoffeeContextType {
   deliveryAddress: DeliveryAddress | null
   paymentMethod: PaymentMethod | null
   addToCart(coffee: Coffee): void
+  confirmDelivery(): void
   choosePaymentMethod(paymentMethod: PaymentMethod): void
   decreaseAmountInCart(coffeeId: number): void
   increaseAmountInCart(coffeeId: number): void
@@ -51,6 +53,10 @@ export const CoffeeContextProvider: FC<Props> = ({
     dispatch(addToCartAction(coffee))
   }
 
+  function confirmDelivery() {
+    dispatch(confirmDeliveryAction())
+  }
+
   function choosePaymentMethod(paymentMethod: PaymentMethod) {
     dispatch(choosePaymentMethodAction(paymentMethod))
   }
@@ -79,6 +85,7 @@ export const CoffeeContextProvider: FC<Props> = ({
         paymentMethod,
         addToCart,
         choosePaymentMethod,
+        confirmDelivery,
         decreaseAmountInCart,
         increaseAmountInCart,
         removeFromCart,

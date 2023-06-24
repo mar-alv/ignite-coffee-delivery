@@ -3,6 +3,7 @@ import { Coffee, DeliveryAddress, PaymentMethod } from '@interfaces'
 export enum ActionTypes {
   ADD_TO_CART = 'ADD_TO_CART',
   CHOOSE_PAYMENT_METHOD = 'CHOOSE_PAYMENT_METHOD',
+  CONFIRM_DELIVERY = 'CONFIRM_DELIVERY',
   DECREASE_AMOUNT_IN_CART = 'DECREASE_AMOUNT_IN_CART',
   INCREASE_AMOUNT_IN_CART = 'INCREASE_AMOUNT_IN_CART',
   REMOVE_FROM_CART = 'REMOVE_FROM_CART',
@@ -15,6 +16,12 @@ export function addToCartAction(coffee: Coffee) {
     payload: {
       coffee,
     },
+  }
+}
+
+export function confirmDeliveryAction() {
+  return {
+    type: ActionTypes.CONFIRM_DELIVERY,
   }
 }
 

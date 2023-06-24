@@ -7,7 +7,8 @@ export function CheckoutConfirmButton() {
   const {
     coffees,
     deliveryAddress,
-    paymentMethod
+    paymentMethod,
+    confirmDelivery
   } = useContext(CoffeeContext)
 
   const isDisabled = !deliveryAddress?.cep ||
@@ -25,6 +26,7 @@ export function CheckoutConfirmButton() {
         'bg-baseButton text-baseLabel cursor-not-allowed': isDisabled,
         'hover:bg-yellowDark focus:bg-yellowDark text-white': !isDisabled
       })}
+      onClick={confirmDelivery}
       to='/confirmed'
     >
       CONFIRMAR PEDIDO
