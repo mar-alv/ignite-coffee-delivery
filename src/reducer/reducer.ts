@@ -40,8 +40,6 @@ export function coffeeReducer(state: CoffeeState, action: any) {
   case ActionTypes.CONFIRM_DELIVERY: {
     return produce(state, (draft) => {
       draft.coffees = []
-      // draft.deliveryAddress = null
-      // draft.paymentMethod = null
     })
   }
   case ActionTypes.DECREASE_AMOUNT_IN_CART: {
