@@ -11,3 +11,9 @@ My implementation of the challenge project "Coffee Delivery" proposed in the Rea
 
 ## Video Demonstration
 https://www.linkedin.com/feed/update/urn:li:ugcPost:7078453637634506752/
+
+## How to run
+- Download the project
+- Paste these commands in a terminal
+  - ```npm install``` or ```npm i``` to install the dependencies
+  - ```npm run dev``` to run the project locally
