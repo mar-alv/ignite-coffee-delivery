@@ -1,4 +1,4 @@
-import clsx from 'clsx'
+// import clsx from 'clsx'
 import { PaymentMethod } from '@interfaces'
 import { PaymentMethodsEnum } from '@enums'
 import { Bank, CreditCard, Money } from 'phosphor-react'
@@ -30,10 +30,10 @@ export function CheckoutPaymentMethodButton({ onSelect, isSelected, paymentMetho
   return (
     <button
       onClick={handleSelect}
-      className={clsx('bg-baseButton inline-flex p-4 rounded-md', {
+      /*className={clsx('bg-baseButton inline-flex p-4 rounded-md', {
         'bg-purpleLight border-solid border-2 border-purple': isSelected,
         'hover:bg-baseHover hover:text-baseSubTitle focus:bg-baseHover focus:text-baseSubTitle transition duration-500 ease-out': !isSelected
-      })}
+      })}*/
     >
       {renderPaymenthMethodButtonIcon(id)}
       <span className='ml-3 font-roboto text-xs text-baseText'>

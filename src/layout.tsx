@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom'
 
 export const Layout = () => {
   return (
-    <div className='min-h-screen bg-background pb-32'>
+    <div id='app'>
       <Header />
       <Outlet />
     </div>
