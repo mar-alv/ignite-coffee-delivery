@@ -72,12 +72,17 @@ export const GlobalStyle = createGlobalStyle`
   }
 
 	#app {
-		max-width: 112rem;
-		width: 100%;
-		margin-inline: auto;
 		padding: 3.2rem;
 		display: grid;
 		place-content: center;
+	}
+
+	.title-xl,
+	.title-l,
+	.title-m,
+	.title-s,
+	.title-xs {
+		font-family: 'Baloo 2', system-ui, sans-serif;
 	}
 
 	.title-xl {

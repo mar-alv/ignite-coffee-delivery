@@ -1,18 +1,20 @@
 import { Coffee } from '@interfaces'
 import { CoffeeCard } from '@components'
-import coffeesJson from '../../coffees.json'
+import coffeesJson from '../../../coffees.json'
+import { Coffees, OurCoffees, Title } from './styles'
 
 export function CoffeeList() {
   const coffees: Coffee[] = coffeesJson
 
   return (
-    <div className='px-[10%]'>
-      <h1 className='pt-8 font-baloo2 text-[2rem] text-baseSubTitle font-extrabold'>
+    <OurCoffees>
+      <Title className='title-l'>
         Nossos cafés
-      </h1>
-      <div className='grid grid-cols-4 gap-8 mt-14'>
+      </Title>
+
+      <Coffees>
         {coffees.map(coffee => <CoffeeCard key={coffee.id} coffee={coffee} />)}
-      </div>
-    </div>
+      </Coffees>
+    </OurCoffees>
   )
 }

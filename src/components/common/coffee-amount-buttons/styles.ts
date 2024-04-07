@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const StyledButtons = styled.header`
+export const StyledButtons = styled.div`
 	padding: .8rem;
 	gap: .4rem;
 	display: flex;

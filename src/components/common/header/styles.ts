@@ -2,6 +2,9 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const StyledHeader = styled.header`
+	max-width: 106rem;
+	width: 100%;
+	margin-inline: auto;
 	gap: 1.2rem;
 	display: grid;
 	grid-template-columns: 1fr auto auto;
