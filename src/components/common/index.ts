@@ -1,3 +1,3 @@
-export { CoffeeAmountButtons } from './coffeeAmountButtons'
-export { Header } from './header/header'
+export { CoffeeAmountButtons } from './coffee-amount-buttons'
+export { Header } from './header'
 export { Input } from './input'
