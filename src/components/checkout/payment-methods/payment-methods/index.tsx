@@ -1,10 +1,11 @@
-import { CheckoutPaymentMethodButton } from '@components'
+import { PaymentMethodButton } from '@components'
 import { CoffeeContext } from '@context'
 import { PaymentMethod } from '@interfaces'
-import paymentMethodsJson from '../../paymentMethods.json'
+import paymentMethodsJson from '../paymentMethods.json'
+import { StyledPaymentMethods } from './styles'
 import { useContext } from 'react'
 
-export function CheckoutPaymentMethodsList() {
+export function PaymentMethods() {
   const { paymentMethod, choosePaymentMethod } = useContext(CoffeeContext)
 
   const paymentMethods: PaymentMethod[] = paymentMethodsJson
@@ -16,15 +17,15 @@ export function CheckoutPaymentMethodsList() {
   }
 
   return (
-    <div className='grid grid-cols-3 gap-3 mt-8'>
+    <StyledPaymentMethods>
       {paymentMethods.map(method =>
-        <CheckoutPaymentMethodButton
+        <PaymentMethodButton
           key={method.id}
           isSelected={method.id === paymentMethod?.id}
           onSelect={handleSelect}
           paymentMethod={method}
         />
       )}
-    </div>
+    </StyledPaymentMethods>
   )
 }
