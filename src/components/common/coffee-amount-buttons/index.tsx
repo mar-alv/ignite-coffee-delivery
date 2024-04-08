@@ -14,7 +14,7 @@ export function CoffeeAmountButtons({ amount, onDecreaseAmount, onIncreaseAmount
       <button onClick={onDecreaseAmount}>
         <Minus color={defaultTheme.purple} size={14} weight='fill' />
       </button>
-      <span className='text-baseTitle'>
+      <span className='text-m-normal'>
         {amount}
       </span>
       <button onClick={onIncreaseAmount}>

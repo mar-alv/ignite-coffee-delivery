@@ -50,7 +50,6 @@ export const defaultTheme = {
 
 	'text-xs-size': '1.2rem',
 	'text-xs-leading': '130%',
-	'text-xs-weight': 'bold',
 
 	'tag-size': '1rem',
 	'tag-leading': '130%',
