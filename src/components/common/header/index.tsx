@@ -1,4 +1,4 @@
-import { CartButton, CoffeeCount, Location, StyledHeader } from './styles'
+import { CartButton, CoffeeCount, Location, StyledHeader, StyledLogo } from './styles'
 import { CoffeeContext } from '@context'
 import { defaultTheme } from '@styles'
 import { Link } from 'react-router-dom'
@@ -11,9 +11,9 @@ export function Header() {
 
   return(
     <StyledHeader>
-      <Link to='/'>
+      <StyledLogo to='/'>
         <img src={logo} alt='Logo pequeno da Coffee Delivery' />
-      </Link>
+      </StyledLogo>
 
 			<Location className='text-sm'>
 				<MapPin color={defaultTheme.purple} size={22} weight='fill' />

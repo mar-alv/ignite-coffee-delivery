@@ -10,6 +10,10 @@ export const StyledHeader = styled.header`
 	grid-template-columns: 1fr auto auto;
 `
 
+export const StyledLogo = styled(Link)`
+	cursor: pointer;
+`
+
 export const Location = styled.div`
 	gap: .4rem;
 	display: flex;
@@ -27,6 +31,7 @@ export const CartButton = styled(Link)`
 	place-items: center;
 	position: relative;
 
+	cursor: pointer;
 	border-radius: 0.6rem;
 	background-color: ${(props) => props.theme['yellow-light']};
 `
