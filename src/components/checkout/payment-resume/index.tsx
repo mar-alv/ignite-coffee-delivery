@@ -1,8 +1,9 @@
 import { CoffeeContext } from '@context'
 import { currencyUtils } from '@utils'
 import { useContext } from 'react'
+import { StyledPaymentItem, StyledPaymentResume, StyledPaymentTotal } from './styles'
 
-export function CheckoutPaymentResume() {
+export function PaymentResume() {
   const { coffees } = useContext(CoffeeContext)
 
   const coffeesPrice = coffees.reduce((previousPrice, currentCoffee) =>{
@@ -15,19 +16,21 @@ export function CheckoutPaymentResume() {
   const totalPrice = coffeesPrice + feePrice
 
   return (
-    <div className='font-roboto grid gap-3'>
-      <div className='flex justify-between text-baseText text-sm'>
+    <StyledPaymentResume>
+      <StyledPaymentItem className='text-s'>
         <p>Total de itens</p>
         <p>{currencyUtils.toBrazillianCurrency(coffeesPrice)}</p>
-      </div>
-      <div className='flex justify-between text-baseText text-sm'>
+      </StyledPaymentItem>
+
+      <StyledPaymentItem className='text-s'>
         <p>Entrega</p>
         <p>{currencyUtils.toBrazillianCurrency(feePrice)}</p>
-      </div>
-      <div className='flex justify-between text-baseSubTitle font-bold text-xl'>
+      </StyledPaymentItem>
+
+      <StyledPaymentTotal className='text-l-bold'>
         <p>Total</p>
         <p>{currencyUtils.toBrazillianCurrency(totalPrice)}</p>
-      </div>
-    </div>
+      </StyledPaymentTotal>
+    </StyledPaymentResume>
   )
 }
