@@ -7,6 +7,7 @@ export const StyledCard = styled.article`
 `
 
 export const StyledImage = styled.img`
+	max-width: none;
   width: 6.4rem;
   height: 6.4rem;
 `
@@ -22,6 +23,7 @@ export const StyledButtons = styled.div`
 `
 
 export const StyledPrice = styled.p`
+	white-space: nowrap;
 	color: ${(props) => props.theme['base-text']};
 `
 

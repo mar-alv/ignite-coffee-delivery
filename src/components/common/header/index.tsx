@@ -1,7 +1,6 @@
 import { CartButton, CoffeeCount, Location, StyledHeader, StyledLogo } from './styles'
 import { CoffeeContext } from '@context'
 import { defaultTheme } from '@styles'
-import { Link } from 'react-router-dom'
 import logo from '../../../assets/logo.svg'
 import { MapPin, ShoppingCart } from 'phosphor-react'
 import { useContext } from 'react'

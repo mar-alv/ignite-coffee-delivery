@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const StyledHeader = styled.header`
-	max-width: 106rem;
+	max-width: 112rem;
 	width: 100%;
 	margin-inline: auto;
 	gap: 1.2rem;
@@ -12,6 +12,7 @@ export const StyledHeader = styled.header`
 
 export const StyledLogo = styled(Link)`
 	cursor: pointer;
+	justify-self: start;
 `
 
 export const Location = styled.div`
