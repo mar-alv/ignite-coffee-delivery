@@ -40,11 +40,9 @@ export const defaultTheme = {
 
 	'text-l-size': '2rem',
 	'text-l-leading': '130%',
-	'text-l-weight': 'normal',
 
 	'text-m-size': '1.6rem',
 	'text-m-leading': '130%',
-	'text-m-weight': 'normal',
 
 	'text-s-size': '1.4rem',
 	'text-s-leading': '130%',

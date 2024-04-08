@@ -7,5 +7,6 @@ export const StyledButtons = styled.div`
 	align-items: center;
 
 	border-radius: .6rem;
+	color: ${(props) => props.theme['base-title']};
 	background-color: ${(props) => props.theme['base-button']};
 `

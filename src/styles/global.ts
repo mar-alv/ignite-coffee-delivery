@@ -115,15 +115,27 @@ export const GlobalStyle = createGlobalStyle`
 		line-height: ${(props) => props.theme['title-xs-leading']};
 	}
 
-	.text-l {
+	.text-l-normal {
 		font-size: ${(props) => props.theme['text-l-size']};
-		font-weight: ${(props) => props.theme['text-l-weight']};
+		font-weight: normal;
 		line-height: ${(props) => props.theme['text-l-leading']};
 	}
 
-	.text-m {
+	.text-l-bold {
+		font-size: ${(props) => props.theme['text-l-size']};
+		font-weight: bold;
+		line-height: ${(props) => props.theme['text-l-leading']};
+	}
+
+	.text-m-normal {
 		font-size: ${(props) => props.theme['text-m-size']};
-		font-weight: ${(props) => props.theme['text-m-weight']};
+		font-weight: normal;
+		line-height: ${(props) => props.theme['text-m-leading']};
+	}
+
+	.text-m-bold {
+		font-size: ${(props) => props.theme['text-m-size']};
+		font-weight: bold;
 		line-height: ${(props) => props.theme['text-m-leading']};
 	}
 
