@@ -11,7 +11,13 @@ export const StyledConfirmButton = styled(Link)`
 	color: ${(props) => props.theme['base-white']};
 	background-color: ${(props) => props.theme['yellow']};
 
-	&:hover {
+	&:not(&.--disabled):hover {
 		background-color: ${(props) => props.theme['yellow-dark']};
+	}
+
+	&.--disabled {
+		cursor: not-allowed;
+		color: ${(props) => props.theme['base-label']};
+		background-color: ${(props) => props.theme['base-button']};
 	}
 `

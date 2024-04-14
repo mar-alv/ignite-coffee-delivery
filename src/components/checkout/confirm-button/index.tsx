@@ -10,12 +10,12 @@ export function ConfirmButton() {
     confirmDelivery
   } = useContext(CoffeeContext)
 
-  const isDisabled = !deliveryAddress?.cep ||
-                     !deliveryAddress?.city ||
-                     !deliveryAddress?.neighborhood ||
-                     !deliveryAddress?.number ||
-                     !deliveryAddress?.state ||
-                     !deliveryAddress?.street ||
+  const isDisabled = !deliveryAddress.cep ||
+                     !deliveryAddress.city ||
+                     !deliveryAddress.neighborhood ||
+                     !deliveryAddress.number ||
+                     !deliveryAddress.state ||
+                     !deliveryAddress.street ||
                      !paymentMethod ||
                      !coffees.length
 
