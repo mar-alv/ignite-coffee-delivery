@@ -5,6 +5,7 @@ import { produce } from 'immer'
 interface CoffeeState {
   coffees: Coffee[]
   deliveryAddress: DeliveryAddress
+	hasConfirmedDelivery: boolean
   paymentMethod: PaymentMethod | null
 }
 
@@ -40,6 +41,7 @@ export function coffeeReducer(state: CoffeeState, action: any) {
   case ActionTypes.CONFIRM_DELIVERY: {
     return produce(state, (draft) => {
       draft.coffees = []
+			draft.hasConfirmedDelivery = true
     })
   }
   case ActionTypes.DECREASE_AMOUNT_IN_CART: {

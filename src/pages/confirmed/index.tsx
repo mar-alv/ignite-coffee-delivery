@@ -1,6 +1,7 @@
 import { CoffeeContext } from '@context'
 import confirmedImage from '../../assets/confirmedImage.png'
 import { CurrencyDollar, MapPin, Timer } from 'phosphor-react'
+import { defaultTheme } from '@styles'
 import { stringUtils } from '@utils'
 import {
 	StyledBorder,
@@ -11,11 +12,18 @@ import {
 	StyledSubTitle,
 	StyledTitle
 } from './styles'
-import { useContext } from 'react'
-import { defaultTheme } from '@styles'
+import { useContext, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export function Confirmed() {
-  const { deliveryAddress, paymentMethod } = useContext(CoffeeContext)
+  const { deliveryAddress, hasConfirmedDelivery, paymentMethod } = useContext(CoffeeContext)
+
+	const navigate = useNavigate()
+
+	useEffect(() => {
+		if (!hasConfirmedDelivery)
+			navigate('/')
+	}, [])
 
   return (
     <StyledPage>

@@ -51,6 +51,7 @@ export const StyledInfo = styled.div`
 	display: grid;
 	grid-template: auto auto / auto auto;
 	align-items: center;
+	justify-content: start;
 
 	color: ${(props) => props.theme['base-text']};
 

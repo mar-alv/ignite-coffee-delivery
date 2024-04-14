@@ -19,6 +19,7 @@ import { Coffee, DeliveryAddress, PaymentMethod } from '@interfaces'
 interface CoffeeContextType {
   coffees: Coffee[]
   deliveryAddress: DeliveryAddress
+	hasConfirmedDelivery: boolean
   paymentMethod: PaymentMethod | null
   addToCart(coffee: Coffee): void
   confirmDelivery(): void
@@ -38,7 +39,7 @@ export const CoffeeContext = createContext({} as CoffeeContextType)
 export const CoffeeContextProvider: FC<Props> = ({
   children,
 }) => {
-  const [cyclesState, dispatch] = useReducer(
+  const [coffeesState, dispatch] = useReducer(
     coffeeReducer,
     {
       coffees: [],
@@ -51,11 +52,12 @@ export const CoffeeContextProvider: FC<Props> = ({
 				state: '',
 				street: ''
 			},
+			hasConfirmedDelivery: false,
       paymentMethod: null
     }
   )
 
-  const { coffees, deliveryAddress, paymentMethod } = cyclesState
+  const { coffees, deliveryAddress, hasConfirmedDelivery, paymentMethod } = coffeesState
 
   function addToCart(coffee: Coffee) {
     dispatch(addToCartAction(coffee))
@@ -90,6 +92,7 @@ export const CoffeeContextProvider: FC<Props> = ({
       value={{
         coffees,
         deliveryAddress,
+				hasConfirmedDelivery,
         paymentMethod,
         addToCart,
         choosePaymentMethod,
