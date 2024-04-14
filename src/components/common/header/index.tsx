@@ -1,4 +1,10 @@
-import { CartButton, CoffeeCount, Location, StyledHeader, StyledLogo } from './styles'
+import {
+	StyledCart,
+	StyledCoffeeCount,
+	StyledHeader,
+	StyledLocation,
+	StyledLogo
+} from './styles'
 import { CoffeeContext } from '@context'
 import { defaultTheme } from '@styles'
 import logo from '../../../assets/logo.svg'
@@ -14,20 +20,20 @@ export function Header() {
         <img src={logo} alt='Logo pequeno da Coffee Delivery' />
       </StyledLogo>
 
-			<Location className='text-sm'>
+			<StyledLocation className='text-sm'>
 				<MapPin color={defaultTheme.purple} size={22} weight='fill' />
 				Porto Alegre, RS
-			</Location>
+			</StyledLocation>
 
-			<CartButton to='/checkout'>
+			<StyledCart to='/checkout'>
 				<ShoppingCart color={defaultTheme['yellow-dark']} size={22} weight='fill' />
 
 				{!!coffees.length && (
-					<CoffeeCount className='text-xs'>
+					<StyledCoffeeCount className='text-xs'>
 						{coffees.length}
-					</CoffeeCount>
+					</StyledCoffeeCount>
 				)}
-			</CartButton>
+			</StyledCart>
     </StyledHeader>
   )
 }

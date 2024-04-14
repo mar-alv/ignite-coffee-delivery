@@ -3,9 +3,9 @@ import { defaultTheme } from '@styles'
 import { DeliveryAddress, ViaCepDeliveryAddress } from '@interfaces'
 import { Input } from '@components'
 import { MapPinLine } from 'phosphor-react'
-import { useContext, useEffect } from 'react'
-import { StyledForm, StyledFormHeader, StyledInputs } from './styles'
 import { stringUtils } from '@utils'
+import { StyledForm, StyledFormHeader, StyledInputs } from './styles'
+import { useContext, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 
 export function CheckoutForm() {
@@ -53,13 +53,13 @@ export function CheckoutForm() {
   useEffect(() => {
     const subscription = watch((data) => {
       const updatedDeliveryAddress: DeliveryAddress = {
-        cep: data.cep,
-        city: data.city,
+        cep: data.cep ?? '',
+        city: data.city ?? '',
         complement: data.complement,
-        neighborhood: data.neighborhood,
-        number: data.number,
-        state: data.state,
-        street: data.street,
+        neighborhood: data.neighborhood ?? '',
+        number: data.number ?? '',
+        state: data.state ?? '',
+        street: data.street ?? '',
       }
 
       saveDeliveryAddress(updatedDeliveryAddress)

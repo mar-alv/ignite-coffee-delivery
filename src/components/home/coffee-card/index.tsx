@@ -1,9 +1,19 @@
-import { Card, CardFooter, CartButton, Description, Image, Name, Price, Tag, Tags } from './styles'
 import { Coffee } from '@interfaces'
 import { CoffeeAmountButtons } from '@components'
 import { CoffeeContext } from '@context'
 import { defaultTheme } from '@styles'
 import { ShoppingCart } from 'phosphor-react'
+import {
+	StyledButton,
+	StyledCard,
+	StyledDescription,
+	StyledFooter,
+	StyledImage,
+	StyledName,
+	StyledPrice,
+	StyledTag,
+	StyledTags
+} from './styles'
 import { useContext, useState } from 'react'
 
 interface Props {
@@ -33,43 +43,43 @@ export function CoffeeCard({ coffee }: Props) {
   }
 
   return (
-    <Card>
-      <Image src={image} alt={`Imagem ilustrativa da bebida ${name.toLocaleLowerCase()}`} />
+    <StyledCard>
+      <StyledImage src={image} alt={`Imagem ilustrativa da bebida ${name.toLocaleLowerCase()}`} />
 
-      <Tags>
+      <StyledTags>
         {tags.map(tag =>
-          <Tag key={tag.id} className='tag'>
+          <StyledTag key={tag.id} className='tag'>
             {tag.description}
-          </Tag>
+          </StyledTag>
         )}
-      </Tags>
+      </StyledTags>
 
-      <Name className='title-s'>
+      <StyledName className='title-s'>
         {name}
-      </Name>
+      </StyledName>
 
-      <Description className='text-s'>
+      <StyledDescription className='text-s'>
         {description}
-      </Description>
+      </StyledDescription>
 
-      <CardFooter>
-        <Price className='text-baseText'>
+      <StyledFooter>
+        <StyledPrice className='text-baseText'>
           <sub className='text-s'>
             R$
           </sub>
           <span className='title-m'>
             {coffeePrice}
           </span>
-        </Price>
+        </StyledPrice>
         <CoffeeAmountButtons
           amount={amount}
           onDecreaseAmount={handleDecreaseAmount}
           onIncreaseAmount={handleIncreaseAmount}
         />
-        <CartButton onClick={handleAddToCart}>
+        <StyledButton onClick={handleAddToCart}>
           <ShoppingCart color={defaultTheme['base-card']} size={22} weight='fill' />
-        </CartButton>
-      </CardFooter>
-    </Card>
+        </StyledButton>
+      </StyledFooter>
+    </StyledCard>
   )
 }

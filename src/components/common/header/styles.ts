@@ -15,7 +15,7 @@ export const StyledLogo = styled(Link)`
 	justify-self: start;
 `
 
-export const Location = styled.div`
+export const StyledLocation = styled.div`
 	gap: .4rem;
 	display: flex;
 	align-items: center;
@@ -26,7 +26,7 @@ export const Location = styled.div`
 	background-color: ${(props) => props.theme['purple-light']};
 `
 
-export const CartButton = styled(Link)`
+export const StyledCart = styled(Link)`
 	padding: .8rem;
 	display: grid;
 	place-items: center;
@@ -37,7 +37,7 @@ export const CartButton = styled(Link)`
 	background-color: ${(props) => props.theme['yellow-light']};
 `
 
-export const CoffeeCount = styled.sup`
+export const StyledCoffeeCount = styled.sup`
 	padding: .2rem .4rem;
 	top: -.8rem;
 	right: -.8rem;

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-export const StyledConfirmButton = styled(Link)`
+export const StyledButton = styled(Link)`
 	margin-top: 2.4rem;
 	padding: 1.2rem;
 

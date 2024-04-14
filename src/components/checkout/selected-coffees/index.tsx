@@ -1,6 +1,6 @@
 import { CheckoutCoffeeCard, ConfirmButton, PaymentResume } from '@components'
 import { CoffeeContext } from '@context'
-import { StyledContainer, StyledSelectedCoffees } from './styles'
+import { StyledCoffees, StyledSelectedCoffees } from './styles'
 import { useContext } from 'react'
 
 export function SelectedCoffees() {
@@ -12,11 +12,11 @@ export function SelectedCoffees() {
         Cafés selecionados
       </h2>
 
-      <StyledContainer>
+      <StyledCoffees>
         {coffees.map(coffee=> <CheckoutCoffeeCard key={coffee.id} coffee={coffee} />)}
         <PaymentResume />
         <ConfirmButton />
-      </StyledContainer>
+      </StyledCoffees>
     </StyledSelectedCoffees>
   )
 }

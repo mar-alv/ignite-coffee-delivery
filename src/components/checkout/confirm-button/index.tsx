@@ -1,5 +1,5 @@
 import { CoffeeContext } from '@context'
-import { StyledConfirmButton } from './styles'
+import { StyledButton } from './styles'
 import { useContext } from 'react'
 
 export function ConfirmButton() {
@@ -20,12 +20,12 @@ export function ConfirmButton() {
                      !coffees.length
 
   return (
-    <StyledConfirmButton
+    <StyledButton
 			className={`button-g ${isDisabled ? '--disabled' : ''}`}
       onClick={confirmDelivery}
       to='/confirmed'
     >
       CONFIRMAR PEDIDO
-    </StyledConfirmButton>
+    </StyledButton>
   )
 }

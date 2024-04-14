@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Card = styled.article`
+export const StyledCard = styled.article`
 	padding: 2rem;
 	display: grid;
 	justify-items: center;
@@ -12,19 +12,19 @@ export const Card = styled.article`
 	background-color: ${(props) => props.theme['base-card']};
 `
 
-export const Image = styled.img`
+export const StyledImage = styled.img`
 	width: 12rem;
 	height: 12rem;
 	margin-top: -4.2rem;
 `
 
-export const Tags = styled.div`
+export const StyledTags = styled.div`
 	margin-top: 1.2rem;
 	gap: .4rem;
 	display: flex;
 `
 
-export const Tag = styled.span`
+export const StyledTag = styled.span`
 	padding: .4rem .8rem;
 
 	border-radius: 3rem;
@@ -32,19 +32,19 @@ export const Tag = styled.span`
 	background-color: ${(props) => props.theme['yellow-light']};
 `
 
-export const Name = styled.h3`
+export const StyledName = styled.h3`
 	margin-top: 1.6rem;
 
 	color: ${(props) => props.theme['base-subtitle']};
 `
 
-export const Description = styled.h3`
+export const StyledDescription = styled.h3`
 	margin-top: .8rem;
 
 	color: ${(props) => props.theme['base-label']};
 `
 
-export const CardFooter = styled.div`
+export const StyledFooter = styled.div`
 	margin-top: 3.2rem;
 	gap: .8rem;
 	display: grid;
@@ -52,13 +52,13 @@ export const CardFooter = styled.div`
 	align-items: center;
 `
 
-export const Price = styled.span`
+export const StyledPrice = styled.span`
 	gap: .4rem;
 	display: flex;
 	align-items: baseline;
 `
 
-export const CartButton = styled.button`
+export const StyledButton = styled.button`
 	padding: .8rem;
 	display: grid;
 	place-items: center;
