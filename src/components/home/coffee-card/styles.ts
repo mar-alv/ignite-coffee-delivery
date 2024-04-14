@@ -44,7 +44,7 @@ export const Description = styled.h3`
 	color: ${(props) => props.theme['base-label']};
 `
 
-export const CardFooter = styled.button`
+export const CardFooter = styled.div`
 	margin-top: 3.2rem;
 	gap: .8rem;
 	display: grid;
