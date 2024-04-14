@@ -18,7 +18,7 @@ import { Coffee, DeliveryAddress, PaymentMethod } from '@interfaces'
 
 interface CoffeeContextType {
   coffees: Coffee[]
-  deliveryAddress: DeliveryAddress | null
+  deliveryAddress: DeliveryAddress
   paymentMethod: PaymentMethod | null
   addToCart(coffee: Coffee): void
   confirmDelivery(): void
@@ -42,7 +42,15 @@ export const CoffeeContextProvider: FC<Props> = ({
     coffeeReducer,
     {
       coffees: [],
-      deliveryAddress: null,
+      deliveryAddress: {
+				cep: '',
+				city: '',
+				complement: '',
+				neighborhood: '',
+				number: '',
+				state: '',
+				street: ''
+			},
       paymentMethod: null
     }
   )

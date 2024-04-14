@@ -23,6 +23,7 @@
       "@interfaces": ["./interfaces"],
       "@pages": ["./pages"],
       "@reducer": ["./reducer"],
+			"@styles": ["./styles/themes/default.ts"],
       "@utils": ["./utils"]
     }
   },

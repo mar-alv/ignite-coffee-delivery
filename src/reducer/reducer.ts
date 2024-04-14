@@ -4,7 +4,7 @@ import { produce } from 'immer'
 
 interface CoffeeState {
   coffees: Coffee[]
-  deliveryAddress: DeliveryAddress | null
+  deliveryAddress: DeliveryAddress
   paymentMethod: PaymentMethod | null
 }
 
