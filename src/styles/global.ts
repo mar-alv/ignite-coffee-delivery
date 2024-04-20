@@ -73,8 +73,6 @@ export const GlobalStyle = createGlobalStyle`
 
 	#app {
 		padding: 3.2rem;
-		display: grid;
-		place-content: center;
 	}
 
 	.title-xl,
