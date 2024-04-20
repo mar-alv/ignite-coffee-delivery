@@ -18,8 +18,9 @@ export const StyledSubTitle = styled.p`
 export const StyledDelivery = styled.section`
 	width: 100%;
 	margin-top: 4rem;
-	gap: 16rem;
+	gap: 1.6rem;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 `
 

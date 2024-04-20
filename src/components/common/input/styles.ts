@@ -15,6 +15,8 @@ export const StyledInputWrapper = styled.div`
 `
 
 export const StyledInput = styled.input`
+	width: 100%;
+
 	color: ${(props) => props.theme['base-text']};
 	
 	appearance: textfield;

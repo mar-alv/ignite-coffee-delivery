@@ -1,6 +1,7 @@
 import { styled } from 'styled-components'
 
 export const StyledSelectedCoffees = styled.section`
+	max-width: 44.8rem;
 	gap: 1.2rem;
 	display: grid;
 
@@ -8,6 +9,7 @@ export const StyledSelectedCoffees = styled.section`
 		color: ${(props) => props.theme['base-subtitle']};
 	}
 `
+
 export const StyledCoffees = styled.section`
 	padding: 4rem;
 	gap: 1.2rem;
