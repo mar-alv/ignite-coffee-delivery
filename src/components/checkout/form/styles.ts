@@ -19,19 +19,43 @@ export const StyledFormHeader = styled.div`
 `
 
 export const StyledInputs = styled.div`
-	gap: 1.6rem;
-	display: grid;
-	grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+  gap: 1.6rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 
-	div:nth-child(2) {
-		grid-column: span 4;
-	}
+  > div:nth-child(1) {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+  }
 
-	div:nth-child(4) {
-		grid-column: span 3;
-	}
+  > div:nth-child(2) {
+    grid-column: 1 / span 3;
+    grid-row: 2 / span 1;
+  }
 
-	div:nth-child(6) {
-		grid-column: span 1;
-	}
-`
+  > div:nth-child(3) {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+  }
+
+  > div:nth-child(4) {
+    grid-column: 2 / span 2;
+    grid-row: 3 / span 1;
+  }
+
+  > div:nth-child(5) {
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 1;
+  }
+
+  > div:nth-child(6) {
+    grid-column: 2 / span 1;
+    grid-row: 4 / span 1;
+  }
+
+  > div:nth-child(7) {
+    grid-column: 3 / span 1;
+    grid-row: 4 / span 1;
+  }
+`;
+

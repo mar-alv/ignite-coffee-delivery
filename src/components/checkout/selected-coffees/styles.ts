@@ -1,6 +1,7 @@
 import { styled } from 'styled-components'
 
 export const StyledSelectedCoffees = styled.section`
+	max-width: 44.8rem;
 	gap: 1.2rem;
 	display: grid;
 
