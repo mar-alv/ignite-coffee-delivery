@@ -9,6 +9,7 @@ export const StyledSelectedCoffees = styled.section`
 		color: ${(props) => props.theme['base-subtitle']};
 	}
 `
+
 export const StyledCoffees = styled.section`
 	padding: 4rem;
 	gap: 1.2rem;
