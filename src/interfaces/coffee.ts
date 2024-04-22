@@ -2,7 +2,7 @@ import { CoffeeTag } from '@interfaces'
 
 export interface Coffee {
   id: number
-  amount?: number
+  amount: number
   description: string
   image: string
   name: string

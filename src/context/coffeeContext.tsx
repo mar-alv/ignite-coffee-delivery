@@ -1,20 +1,19 @@
 import {
-  FC,
-  ReactNode,
-  useReducer,
-  createContext,
-} from 'react'
-import {
-  addToCartAction,
+	addToCartAction,
   choosePaymentMethodAction,
   confirmDeliveryAction,
-  coffeeReducer,
   decreaseAmountInCartAction,
   increaseAmountInCartAction,
   removeFromCartAction,
   saveDeliveryAddressAction,
-} from '@reducer'
+} from './actions'
 import { Coffee, DeliveryAddress, PaymentMethod } from '@interfaces'
+import { coffeeReducer } from './reducer'
+import {
+	ReactNode,
+	useReducer,
+	createContext,
+} from 'react'
 
 interface CoffeeContextType {
   coffees: Coffee[]
@@ -36,9 +35,9 @@ interface Props {
 
 export const CoffeeContext = createContext({} as CoffeeContextType)
 
-export const CoffeeContextProvider: FC<Props> = ({
-  children,
-}) => {
+export const CoffeeContextProvider = ({
+  children
+}: Props) => {
   const [coffeesState, dispatch] = useReducer(
     coffeeReducer,
     {

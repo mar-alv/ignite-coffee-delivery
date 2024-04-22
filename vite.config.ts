@@ -12,7 +12,6 @@ export default defineConfig({
       '@enums': path.resolve(__dirname, './src/enums'),
       '@interfaces': path.resolve(__dirname, './src/interfaces'),
       '@pages': path.resolve(__dirname, './src/pages'),
-      '@reducer': path.resolve(__dirname, './src/reducer'),
       '@styles': path.resolve(__dirname, './src/styles/themes/default.ts'),
       '@utils': path.resolve(__dirname, './src/utils')
     },
