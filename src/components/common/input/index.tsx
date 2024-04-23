@@ -16,11 +16,11 @@ interface Props extends ComponentProps<'input'> {
   register: UseFormRegister<DeliveryAddress>
 }
 
-export function Input({ className, name, placeholder, register, ...props }: Props) {
+export function Input({ name, register, ...props }: Props) {
   return (
 		<StyledInputWrapper>
     	<StyledInput
-				placeholder={placeholder}
+				placeholder={props.placeholder}
 				className='text-s'
 				{...register(name)}
 				{...props}

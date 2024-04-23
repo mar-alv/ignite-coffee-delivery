@@ -1,33 +1,55 @@
-/* import { ITask } from '@interfaces'
+import { BrowserRouter } from 'react-router-dom'
+import { Coffee, DeliveryAddress, PaymentMethod } from '@interfaces'
+import { CoffeeContext } from '@context'
 import { ReactNode } from 'react'
-import { TodosContext } from '@contexts'
 
 interface CustomValueProps {
-  tasks?: ITask[]
-  createTask?(content: string): void
-  deleteTask?(taskId: string): void
-  getDoneTasksCount?(): number
-  toggleTaskDone?(taskId: string): void
+  coffees?: Coffee[]
+  deliveryAddress?: DeliveryAddress
+	hasConfirmedDelivery?: boolean
+  paymentMethod?: PaymentMethod | null
+  addToCart?(coffee: Coffee): void
+  confirmDelivery?(): void
+  choosePaymentMethod?(paymentMethod: PaymentMethod): void
+  decreaseAmountInCart?(coffeeId: number): void
+  increaseAmountInCart?(coffeeId: number): void
+  removeFromCart?(coffeeId: number): void
+  saveDeliveryAddress?(deliveryAddress: DeliveryAddress): void
 }
 
 const defaultValue = {
-  createTask: (content: string) => {},
-  deleteTask: (taskId: string) => {},
-  getDoneTasksCount: () => 0,
-  toggleTaskDone: (taskId: string) => {},
-  tasks: [],
+	coffees: [],
+  deliveryAddress: {
+		cep: '',
+		city: '',
+		complement: '',
+		neighborhood: '',
+		number: '',
+		state: '',
+		street: ''
+	},
+	hasConfirmedDelivery: false,
+  paymentMethod: null,
+  addToCart(coffee: Coffee) {},
+  confirmDelivery() {},
+  choosePaymentMethod(paymentMethod: PaymentMethod) {},
+  decreaseAmountInCart(coffeeId: number) {},
+  increaseAmountInCart(coffeeId: number) {},
+  removeFromCart(coffeeId: number) {},
+  saveDeliveryAddress(deliveryAddress: DeliveryAddress) {}
 }
 
 export function customRender(children: ReactNode, customValue = {} as CustomValueProps) {
 	return (
-		<TodosContext.Provider
-			value={{
-				...defaultValue,
-				...customValue
-			}}
-		>
-			{children}
-		</TodosContext.Provider>
+    <BrowserRouter>
+			<CoffeeContext.Provider
+				value={{
+					...defaultValue,
+					...customValue
+				}}
+				>
+				{children}
+			</CoffeeContext.Provider>
+		</BrowserRouter>
 	)
 }
- */
