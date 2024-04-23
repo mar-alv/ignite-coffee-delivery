@@ -2,7 +2,6 @@ import { customRender } from '../../stories-utils'
 import { DeliveryAddress } from '@interfaces'
 import { Input } from '@components'
 import type { Meta, StoryObj } from '@storybook/react'
-import { useArgs } from '@storybook/preview-api'
 import { useForm } from 'react-hook-form'
 
 const meta = {
@@ -13,7 +12,6 @@ const meta = {
   },
   tags: ['autodocs'],
   render: ({ ...args }) => {
-    const [{ amount }, updateArgs] = useArgs()
 		const defaultValues: DeliveryAddress = {
 			cep: '',
 			city: '',
