@@ -8,18 +8,10 @@ import { StyledForm, StyledFormHeader, StyledInputs } from './styles'
 import { useContext, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 
-export function CheckoutForm() {
+export function Form() {
   const { deliveryAddress, saveDeliveryAddress } = useContext(CoffeeContext)
 
-  const defaultValues: DeliveryAddress = deliveryAddress ?? {
-    cep: '',
-    city: '',
-    complement: '',
-    neighborhood: '',
-    number: '',
-    state: '',
-    street: ''
-  }
+  const defaultValues = deliveryAddress
 
   const { register, setValue, watch } = useForm({ defaultValues })
 

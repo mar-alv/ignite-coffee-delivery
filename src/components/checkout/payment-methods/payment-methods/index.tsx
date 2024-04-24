@@ -11,9 +11,9 @@ export function PaymentMethods() {
   const paymentMethods: PaymentMethod[] = paymentMethodsJson
 
   function handleSelect(paymentMethodId: number) {
-    const paymentMethodSelected = paymentMethods.find(method => method.id === paymentMethodId)!
+    const selectedPaymentMethod = paymentMethods.find(method => method.id === paymentMethodId)!
 
-    choosePaymentMethod(paymentMethodSelected)
+    choosePaymentMethod(selectedPaymentMethod)
   }
 
   return (

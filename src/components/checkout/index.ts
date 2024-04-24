@@ -1,5 +1,5 @@
 export { CheckoutCoffeeCard } from './checkout-coffee-card'
-export { CheckoutForm } from './form'
+export { Form } from './form'
 export { CompleteYourOrder } from './complete-your-order'
 export { ConfirmButton } from './confirm-button'
 export { PaymentResume } from './payment-resume'

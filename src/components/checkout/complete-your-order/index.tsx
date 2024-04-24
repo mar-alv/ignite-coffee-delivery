@@ -1,4 +1,4 @@
-import { CheckoutForm, Payment } from "@components";
+import { Form, Payment } from "@components";
 import { StyledCompleteYourOrder } from "./styles";
 
 export function CompleteYourOrder() {
@@ -8,7 +8,7 @@ export function CompleteYourOrder() {
 				Complete seu pedido
 			</h2>
 
-			<CheckoutForm />
+			<Form />
 			<Payment />
 		</StyledCompleteYourOrder>
 	)
