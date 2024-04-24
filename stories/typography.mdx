@@ -1,0 +1,79 @@
+import { Meta, Typeset } from "@storybook/blocks"
+
+<Meta title="Typography" />
+
+export const typographyBaloo2 = {
+  type: {
+    primary: "Baloo 2",
+  },
+  weight: {
+    bold: "700",
+    extraBold: "800"
+  },
+  size: {
+    s18: 18,
+    s20: 20,
+    s24: 24,
+    s32: 32,
+    s48: 48
+  }
+}
+
+export const SampleText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+
+# Typography
+
+## Baloo 2
+
+**Font:** Baloo 2
+
+**Weights:** 700(bold), 800(extra bold)
+
+<Typeset
+  fontSizes={[
+    Number(typographyBaloo2.size.s18),
+    Number(typographyBaloo2.size.s20),
+    Number(typographyBaloo2.size.s24),
+    Number(typographyBaloo2.size.s32),
+    Number(typographyBaloo2.size.s48),
+  ]}
+  fontWeight={typographyBaloo2.weight.black}
+  sampleText={SampleText}
+  fontFamily={typographyBaloo2.type.primary}
+/>
+
+export const typographyRoboto = {
+  type: {
+    primary: "Roboto",
+  },
+  weight: {
+    regular: "400",
+    bold: "700",
+  },
+  size: {
+    s10: 10,
+    s12: 12,
+    s14: 14,
+    s16: 16,
+    s20: 20
+  }
+}
+
+## Roboto
+
+**Font:** Roboto
+
+**Weights:** 400(regular), 700(bold)
+
+<Typeset
+  fontSizes={[
+    Number(typographyRoboto.size.s10),
+    Number(typographyRoboto.size.s12),
+    Number(typographyRoboto.size.s14),
+    Number(typographyRoboto.size.s16),
+    Number(typographyRoboto.size.s20)
+  ]}
+  fontWeight={typographyRoboto.weight.black}
+  sampleText={SampleText}
+  fontFamily={typographyRoboto.type.primary}
+/>

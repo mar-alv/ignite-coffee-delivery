@@ -26,6 +26,6 @@
       "@utils": ["./utils"]
     }
   },
-  "include": ["src"],
+  "include": ["src", "tests/test-utils.tsx", "jest.config.cjs", "tests/*.tests.tsx", "stories/components/**/*.stories.tsx", "stories/stories-utils.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
