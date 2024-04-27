@@ -1,10 +1,18 @@
 import { CheckoutCoffeeCard, ConfirmButton, PaymentResume } from '@components'
 import { CoffeeContext } from '@context'
 import { StyledCoffees, StyledSelectedCoffees } from './styles'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export function SelectedCoffees() {
   const { coffees } = useContext(CoffeeContext)
+
+	const navigate = useNavigate()
+
+	useEffect(() => {
+		if (!coffees.length)
+			navigate('/')
+	}, [coffees])
 
   return (
     <StyledSelectedCoffees>

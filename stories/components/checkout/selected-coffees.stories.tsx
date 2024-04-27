@@ -40,29 +40,33 @@ const coffee = {
 	]
 }
 
+const deliveryAddress = {
+	cep: 'a',
+	city: 'a',
+	neighborhood: 'a',
+	number: 'a',
+	state: 'a',
+	street: 'a'
+}
+
 export const WithOneCoffee: StoryObj = {
   args: {
-		coffees: [coffee]
+		coffees: [coffee],
+		deliveryAddress
   }
 }
 
 export const WithMoreCoffees: StoryObj = {
   args: {
-		coffees: [coffee, coffee]
+		coffees: [coffee, coffee],
+		deliveryAddress
   }
 }
 
 export const ConfirmedWithOneCoffee: StoryObj = {
   args: {
 		coffees: [coffee],
-		deliveryAddress: {
-			cep: 'a',
-			city: 'a',
-			neighborhood: 'a',
-			number: 'a',
-			state: 'a',
-			street: 'a'
-		},
+		deliveryAddress,
 		paymentMethod: {
         id: 0,
         description: "CARTÃO DE CRÉDITO",
