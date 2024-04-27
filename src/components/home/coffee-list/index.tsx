@@ -1,11 +1,8 @@
-import { Coffee } from '@interfaces'
 import { CoffeeCard } from '@components'
-import coffeesJson from '../../../coffees.json'
+import { coffees } from '../../../coffees'
 import { StyledCoffees, StyledCoffeeList, StyledTitle } from './styles'
 
 export function CoffeeList() {
-  const coffees: Coffee[] = coffeesJson
-
   return (
     <StyledCoffeeList>
       <StyledTitle className='title-l'>
@@ -13,7 +10,7 @@ export function CoffeeList() {
       </StyledTitle>
 
       <StyledCoffees>
-        {coffees.map(coffee => <CoffeeCard key={coffee.id} coffee={coffee} />)}
+        {coffees.map(i => <CoffeeCard key={i.id} coffee={i} />)}
       </StyledCoffees>
     </StyledCoffeeList>
   )
