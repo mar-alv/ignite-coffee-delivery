@@ -9,6 +9,7 @@ module.exports = {
     '^@components(.*)': '<rootDir>/src/components$1',
     '^@context(.*)': '<rootDir>/src/context$1',
     '^@enums(.*)': '<rootDir>/src/enums$1',
+    '^@pages(.*)': '<rootDir>/src/pages$1',
     '^@styles(.*)': '<rootDir>/src/styles/themes/default.ts$1',
     '^@utils(.*)': '<rootDir>/src/utils$1'
 	}

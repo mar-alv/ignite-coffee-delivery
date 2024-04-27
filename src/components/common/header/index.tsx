@@ -25,7 +25,7 @@ export function Header() {
 				Porto Alegre, RS
 			</StyledLocation>
 
-			<StyledCart to='/checkout'>
+			<StyledCart to='/checkout' data-testid='checkout-link-button'>
 				<ShoppingCart color={defaultTheme['yellow-dark']} size={22} weight='fill' />
 
 				{!!coffees.length && (
