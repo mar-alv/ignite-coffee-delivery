@@ -76,7 +76,7 @@ export function CoffeeCard({ coffee }: Props) {
           onDecreaseAmount={handleDecreaseAmount}
           onIncreaseAmount={handleIncreaseAmount}
         />
-        <StyledButton onClick={handleAddToCart}>
+        <StyledButton onClick={handleAddToCart} data-testid='add-coffee-button'>
           <ShoppingCart color={defaultTheme['base-card']} size={22} weight='fill' />
         </StyledButton>
       </StyledFooter>
