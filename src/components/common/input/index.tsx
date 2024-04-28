@@ -20,6 +20,7 @@ export function Input({ name, register, ...props }: Props) {
   return (
 		<StyledInputWrapper>
     	<StyledInput
+				data-testid='input'
 				placeholder={props.placeholder}
 				className='text-s'
 				{...register(name)}

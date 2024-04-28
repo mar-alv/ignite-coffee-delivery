@@ -5,7 +5,7 @@ import { fireEvent, screen } from '@testing-library/react'
 import { paymentUtils } from '@utils'
 import { SelectedCoffees } from '@components'
 
-describe('payment methods tests', () => {
+describe('payment resume tests', () => {
 	it('should update the values when increasing the coffee amount in the cart', () => {
 		let coffeesInTheCart = [coffees[0]]
 
