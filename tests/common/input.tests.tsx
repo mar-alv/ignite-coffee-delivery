@@ -4,11 +4,13 @@ import { Input } from '@components'
 import { fireEvent, screen } from '@testing-library/react'
 
 jest.mock('react-hook-form', () => ({
-  useForm: jest.fn(() => ({ register: jest.fn() })),
-}));
+  useForm: jest.fn(() => ({
+		register: jest.fn()
+	}))
+}))
 
 describe('input tests', () => {
-	const registerMock = jest.fn();
+	const registerMock = jest.fn()
 
   it('should not show the optional label when the field is required', () => {
 		// arrange
