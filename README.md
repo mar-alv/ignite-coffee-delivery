@@ -319,8 +319,7 @@ For a longer video demonstration click here and like my post on
         <br>
         <em>Front-end Developer</em><br>
         <span>"Some AI generated funny quote here 😗"</span><br>
-        <a href='https://www.linkedin.com/in/marcelo-dos-santos-alvarez-474406180/'>LinkedIn</a> |
-        <a href='/'>Portfolio</a>
+        <a href='https://www.linkedin.com/in/marcelo-dos-santos-alvarez-474406180/'>LinkedIn</a>
     </div>
 </div>
 
