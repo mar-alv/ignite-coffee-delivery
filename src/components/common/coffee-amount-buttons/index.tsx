@@ -11,13 +11,13 @@ interface Props {
 export function CoffeeAmountButtons({ amount, onDecreaseAmount, onIncreaseAmount }: Props) {
   return (
     <StyledButtons>
-      <button onClick={onDecreaseAmount}>
+      <button onClick={onDecreaseAmount} data-testid='decrease-amount-button'>
         <Minus color={defaultTheme.purple} size={14} weight='fill' />
       </button>
       <span className='text-m-normal'>
         {amount}
       </span>
-      <button onClick={onIncreaseAmount}>
+      <button onClick={onIncreaseAmount} data-testid='increase-amount-button'>
         <Plus color={defaultTheme.purple} size={14} weight='fill' />
       </button>
     </StyledButtons>

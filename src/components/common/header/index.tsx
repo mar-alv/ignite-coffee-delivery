@@ -16,7 +16,7 @@ export function Header() {
 
   return(
     <StyledHeader>
-      <StyledLogo to='/'>
+      <StyledLogo to='/' data-testid='home-link-button'>
         <img src={logo} alt='Logo pequeno da Coffee Delivery' />
       </StyledLogo>
 
@@ -25,7 +25,7 @@ export function Header() {
 				Porto Alegre, RS
 			</StyledLocation>
 
-			<StyledCart to='/checkout'>
+			<StyledCart to='/checkout' data-testid='checkout-link-button'>
 				<ShoppingCart color={defaultTheme['yellow-dark']} size={22} weight='fill' />
 
 				{!!coffees.length && (
