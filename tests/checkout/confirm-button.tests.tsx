@@ -1,8 +1,9 @@
 import '@testing-library/jest-dom'
+import { App } from '../../src/app'
 import { coffees } from '../../src/coffees'
 import { ConfirmButton } from '@components'
 import { customRender } from '../test-utils'
-import { screen } from '@testing-library/react'
+import { fireEvent, screen } from '@testing-library/react'
 
 describe('confirm button Tests', () => {
   it('should disable the button if there is no delivery address, payment method or coffee in the cart', () => {
@@ -41,5 +42,37 @@ describe('confirm button Tests', () => {
 
     // assert
     expect(button.classList.contains('--disabled')).toBeFalsy()
+  })
+
+  it('should go to the confirmed screen when clicking on the button the button', () => {
+    // arrange
+    customRender(<App />, {
+			coffees: [coffees[0]],
+			deliveryAddress: {
+				cep: '12345678',
+				city: 'Cidade',
+				complement: 'Complemento',
+				neighborhood: 'Bairro',
+				number: '123',
+				state: 'XX',
+				street: 'Rua'
+			},
+			hasConfirmedDelivery: true,
+			paymentMethod: {
+				id: 0,
+				description: 'CARTÃO DE CRÉDITO',
+				isSelected: true
+			}
+		})
+
+		// act
+    const checkoutLinkButton = screen.getByTestId('checkout-link-button')
+		fireEvent.click(checkoutLinkButton)
+
+		const button = screen.getByText('CONFIRMAR PEDIDO')
+		fireEvent.click(button)
+
+    // assert
+    expect(screen.getByText('Uhu! Pedido confirmado')).toBeInTheDocument()
   })
 })
