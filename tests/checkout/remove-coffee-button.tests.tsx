@@ -1,11 +1,10 @@
 import '@testing-library/jest-dom'
-import { App } from '../../src/app'
 import { coffees } from '../../src/coffees'
-import { SelectedCoffees } from '@components'
 import { customRender, customRerender } from '../test-utils'
 import { fireEvent, screen } from '@testing-library/react'
+import { SelectedCoffees } from '@components'
 
-describe('selected coffees tests', () => {
+describe('remove coffee button tests', () => {
 	it('should remove the coffee in the cart when clicking on the button', () => {
 		let coffeesInCart = [coffees[0], coffees[1]]
 
