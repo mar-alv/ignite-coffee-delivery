@@ -5,7 +5,7 @@ import { ConfirmButton } from '@components'
 import { customRender } from '../test-utils'
 import { fireEvent, screen } from '@testing-library/react'
 
-describe('confirm button Tests', () => {
+describe('confirm button tests', () => {
   it('should disable the button if there is no delivery address, payment method or coffee in the cart', () => {
     // arrange
     customRender(<ConfirmButton />)

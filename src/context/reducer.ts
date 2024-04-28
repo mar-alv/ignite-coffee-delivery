@@ -56,6 +56,16 @@ export function coffeeReducer(state: CoffeeState, action: Action): CoffeeState {
     return {
 			...state,
 			coffees: [],
+			deliveryAddress: {
+				cep: '',
+				city: '',
+				complement: '',
+				neighborhood: '',
+				number: '',
+				state: '',
+				street: ''
+			},
+			paymentMethod: null,
 			hasConfirmedDelivery: true
     }
 

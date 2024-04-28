@@ -4,7 +4,7 @@ import { coffees } from '../../src/coffees'
 import { customRender } from '../test-utils'
 import { fireEvent, screen } from '@testing-library/react'
 
-describe('coffee card Tests', () => {
+describe('coffee card tests', () => {
   it('should add a coffee to the cart', () => {
 		const coffeesInTheCart = []
 

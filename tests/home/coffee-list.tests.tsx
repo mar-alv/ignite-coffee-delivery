@@ -4,7 +4,7 @@ import { coffees } from '../../src/coffees'
 import { customRender } from '../test-utils'
 import { screen } from '@testing-library/react'
 
-describe('coffee list Tests', () => {
+describe('coffee list tests', () => {
   it('should render all coffees', () => {
     // arrange
     customRender(<CoffeeList />)

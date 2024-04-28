@@ -5,7 +5,7 @@ import { customRender } from '../test-utils'
 import { fireEvent, screen } from '@testing-library/react'
 import { Header } from '@components'
 
-describe('header Tests', () => {
+describe('header tests', () => {
   it('should not show the amount of coffees if the cart is empty', () => {
     // arrange
     customRender(<Header />)

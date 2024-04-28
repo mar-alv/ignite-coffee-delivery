@@ -4,7 +4,7 @@ import { customRender, customRerender } from '../test-utils'
 import { fireEvent, screen } from '@testing-library/react'
 import { ReactNode } from 'react'
 
-describe('coffee amount buttons Tests', () => {
+describe('coffee amount buttons tests', () => {
 	let amount = 1
 
 	function handleDecreaseAmount() {
