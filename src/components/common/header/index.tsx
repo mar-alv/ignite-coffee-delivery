@@ -16,7 +16,7 @@ export function Header() {
 
   return(
     <StyledHeader>
-      <StyledLogo to='/'>
+      <StyledLogo to='/' data-testid='home-link-button'>
         <img src={logo} alt='Logo pequeno da Coffee Delivery' />
       </StyledLogo>
 
