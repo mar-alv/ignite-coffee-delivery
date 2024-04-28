@@ -19,6 +19,7 @@
 - [📖 Instruções](#pt-br-instrucoes)
   - [📥 Instalar](#pt-br-instalar)
   - [🚀 Rodar Localmente](#pt-br-localmente)
+  - [📋 Rodar Testes Unitários](#pt-br-testes-unitarios)
   - [📔 Rodar Storybook](#pt-br-storybook)
 - [📂 Estrutura](#pt-br-estrutura)
 
@@ -51,6 +52,11 @@ Cole o comando em um terminal, a aplicação estará acessível através desse l
 npm run dev
 ```
 
+##### <a id='pt-br-testes-unitarios' style='text-decoration: none; color: inherit;'>📋 Rodar Testes Unitários</a>
+Cole o comando em um terminal, eles serão executados um atrás do outro apontando se houve testes falhos
+```sh
+npm run tests
+
 ##### <a id='pt-br-storybook' style='text-decoration: none; color: inherit;'>📔 Rodar Storybook</a>
 Cole o comando num terminal, a documentação dos componentes do projeto estará acessível através desse link: http://localhost:6006 
 ```sh
@@ -63,6 +69,8 @@ npm run storybook
 │   └── ... imagens e gifs usados nesta documentação
 │ .storybook/
 │   └── ... arquivos que mantém o funcionamento do Storybook
+│ .tests/
+│   └── ... arquivos que mantém o funcionamento dos testes
 │ src/
 │   ├── assets/
 │   │     └── ... imagens usadas
@@ -97,6 +105,11 @@ npm run storybook
 │   │     └── ...
 │   ├── ... stories genéricos(cor, ícones e tipografia)
 │   └── ... stories-utils.tsx // funções utilitárias pros stories
+│ tests/
+│   ├── contexto x/
+│   |		  └── ... testes unitários
+│   ├── ...
+│   └── ... tests-utils.tsx // funções utilitárias pros testes
 ```
 
 ## <a id='en' style='text-decoration: none; color: inherit;'>🇬🇧 English</a>
@@ -106,6 +119,7 @@ npm run storybook
 - [📖 Instructions](#en-instructions)
   - [📥 Install](#en-install)
   - [🚀 Run Locally](#en-locally)
+  - [📋 Run Unit Tests](#en-unit-tests)
   - [📔 Run Storybook](#en-storybook)
 - [📂 Structure](#en-structure)
 
@@ -138,6 +152,11 @@ Paste the command into a terminal, the application will be accessable through th
 npm run dev
 ```
 
+##### <a id='en-unit-tests' style='text-decoration: none; color: inherit;'>📋 Run Unit Tests</a>
+Paste the command into a terminal, they will be exectued one after the other mentioning if there were failed tests
+```sh
+npm run tests
+
 ##### <a id='en-storybook' style='text-decoration: none; color: inherit;'>📔 Run Storybook</a>
 Paste the command into a terminal, the project's components documentation will be accessible through this link: http://localhost:6006 
 ```sh
@@ -150,6 +169,8 @@ npm run storybook
 │   └── ... images and gifs used in this documentation
 │ .storybook/
 │   └── ... files to keep Storybook working
+│ .tests/
+│   └── ... files to keep tests working
 │ src/
 │   ├── assets/
 │   │     └── ... images used
@@ -184,6 +205,11 @@ npm run storybook
 │   │     └── ...
 │   ├── ... generic stories (color, icons e typography)
 │   └── ... stories-utils.tsx // util functions for stories
+│ tests/
+│   ├── contexto x/
+│   |		  └── ... unit tests
+│   ├── ...
+│   └── ... tests-utils.tsx // util functions for tests
 ```
 
 ## 🧰 Technologies
@@ -204,6 +230,10 @@ npm run storybook
 
 ### Utilities
 [![React Hook Form](https://img.shields.io/badge/React_Hook_Form-FF6B6B?style=for-the-badge&logo=react&logoColor=white)](https://react-hook-form.com/)
+
+### Testing
+[![React Testing Library](https://img.shields.io/badge/React%20Testing%20Library-E33332?style=for-the-badge&logo=testing-library&logoColor=white)](https://testing-library.com/docs/react-testing-library/intro)
+[![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white)](https://jestjs.io/)
 
 ## 📸 Screenshots and 🎥 Recordings
 For a longer video demonstration click here and like my post on
