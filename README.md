@@ -56,6 +56,7 @@ npm run dev
 Cole o comando em um terminal, eles serão executados um após o outro apontando se houve testes falhos
 ```sh
 npm run tests
+```
 
 ##### <a id='pt-br-storybook' style='text-decoration: none; color: inherit;'>📔 Rodar Storybook</a>
 Cole o comando num terminal, a documentação dos componentes do projeto estará acessível através desse link: http://localhost:6006 
@@ -156,6 +157,7 @@ npm run dev
 Paste the command into a terminal, they will be exectued one after the other mentioning if there were failed tests
 ```sh
 npm run tests
+```
 
 ##### <a id='en-storybook' style='text-decoration: none; color: inherit;'>📔 Run Storybook</a>
 Paste the command into a terminal, the project's components documentation will be accessible through this link: http://localhost:6006 
