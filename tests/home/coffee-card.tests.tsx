@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom'
 import { CoffeeCard } from '@components'
-import { coffees } from '../src/coffees'
-import { customRender } from './test-utils'
+import { coffees } from '../../src/coffees'
+import { customRender } from '../test-utils'
 import { fireEvent, screen } from '@testing-library/react'
 
 describe('coffee card Tests', () => {

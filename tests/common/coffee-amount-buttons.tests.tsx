@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom'
 import { CoffeeAmountButtons } from '@components'
-import { customRender, customRerender } from './test-utils'
+import { customRender, customRerender } from '../test-utils'
 import { fireEvent, screen } from '@testing-library/react'
 import { ReactNode } from 'react'
 

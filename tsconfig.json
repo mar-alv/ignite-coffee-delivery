@@ -26,6 +26,6 @@
       "@utils": ["./utils"]
     }
   },
-  "include": ["src", "tests/test-utils.tsx", "jest.config.cjs", "tests/*.tests.tsx", "stories/components/**/*.stories.tsx", "stories/stories-utils.tsx"],
+  "include": ["src", "tests/test-utils.tsx", "jest.config.cjs", "tests/*.tests.tsx", "stories/components/**/*.stories.tsx", "stories/stories-utils.tsx", "tests/common/coffee-amount-buttons.tests.tsx", "tests/common/header.tests.tsx", "tests/home/coffee-card.tests.tsx", "tests/home/coffee-list.tests.tsx", "tests/checkout/confirm-button.tests.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom'
-import { App } from '../src/app'
-import { coffees } from '../src/coffees'
-import { customRender } from './test-utils'
+import { App } from '../../src/app'
+import { coffees } from '../../src/coffees'
+import { customRender } from '../test-utils'
 import { fireEvent, screen } from '@testing-library/react'
 import { Header } from '@components'
 
