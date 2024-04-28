@@ -34,13 +34,13 @@ Nela, foram implementadas as seguintes funcionalidades, que serão demonstradas 
 - **Modificar quantia:** Subtrai ou incrementa a quantia de cafés no carrinho
 - **Remover cafés:** Remove cafés do carrinho
 - **Endereço de entrega:** Informa o endereço em que irá receber sua entrega, informando o CEP outros campos são preenchidos automaticamente, como a rua, bairro, cidade e estado
-- **Formas de pagamento:** Escolhe como irá pagar pela entrega, dentro as opções de cartão de crédito, débito e em dinheiro
+- **Formas de pagamento:** Escolhe como irá pagar pela entrega, dentre as opções de cartão de crédito, débito e em dinheiro
 ##### **Tela de conclusão**
 - **Confirmação do pedido:** Exibe um breve resumo de onde será entregue, a forma de pagamento e uma estimativa de tempo de entrega
 
 #### <a id='pt-br-instrucoes' style='text-decoration: none; color: inherit;'>📖 Instruções</a>
 ##### <a id='pt-br-instalar' style='text-decoration: none; color: inherit;'>📥 Instalar</a>
-Cole o 1º comando em um terminal aberto dentro de uma pasta de sua preferência para clonar o projeto, em seguida rode uma das versões do 2º comando para instalar as dependências
+Cole o 1º comando em um terminal aberto dentro da pasta de sua preferência para clonar o projeto, em seguida rode uma das versões do 2º comando para instalar as dependências
 ```sh
 git clone https://github.com/mar-alv/ignite-coffee-delivery.git
 npm i # Ou npm install
@@ -53,7 +53,7 @@ npm run dev
 ```
 
 ##### <a id='pt-br-testes-unitarios' style='text-decoration: none; color: inherit;'>📋 Rodar Testes Unitários</a>
-Cole o comando em um terminal, eles serão executados um atrás do outro apontando se houve testes falhos
+Cole o comando em um terminal, eles serão executados um após o outro apontando se houve testes falhos
 ```sh
 npm run tests
 
@@ -140,7 +140,7 @@ It implements the following functionalities, which will be demonstrated in photo
 
 #### <a id='en-instructions' style='text-decoration: none; color: inherit;'>📖 Instructions</a>
 ##### <a id='en-instalar' style='text-decoration: none; color: inherit;'>📥 Install</a>
-Paste the 1º command into a terminal open within a folder of your preference to clone the project, then run one of the versions of the 2º command to install the dependencies
+Paste the 1º command into a terminal opened within a folder of your preference to clone the project, then run one of the versions of the 2º command to install the dependencies
 ```sh
 git clone https://github.com/mar-alv/ignite-coffee-delivery.git
 npm i # Or npm install
