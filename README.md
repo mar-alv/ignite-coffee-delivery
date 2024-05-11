@@ -93,7 +93,7 @@ npm run storybook
 │   │     │     ├── componente y/
 │   │     │     │     ├── index.tsx
 │   │     │     │     └── styles.ts
-│   │     │     └── ...
+│   │     └──   └── ...
 │   ├── styles/
 │   │     └── ... estilos globais e default
 │   ├── utils/
@@ -194,7 +194,7 @@ npm run storybook
 │   │     │     ├── component y/
 │   │     │     │     ├── index.tsx
 │   │     │     │     └── styles.ts
-│   │     │     └── ...
+│   │     └──   └── ...
 │   ├── styles/
 │   │     └── ... global styles and default theme
 │   ├── utils/
