@@ -8,9 +8,110 @@
 
   [🎨 Design](https://www.figma.com/file/r5LZ0xLfw6eRVj2U7gpfmA/Coffee-Delivery-%E2%80%A2-Desafio-React-(Copy)?type=design&node-id=2-12&mode=design&t=zZhymDSG5ji1M0D6-0)
 
-  [🇧🇷 Português](#pt-br) / [🇬🇧 English](#en)
+  [🇬🇧 English](#en) / [🇧🇷 Português](#pt-br)
 
 </div>
+
+## <a id='en' style='text-decoration: none; color: inherit;'>🇬🇧 English</a>
+
+### 📚 Summary
+- [❕ About](#en-about)
+- [📖 Instructions](#en-instructions)
+  - [📥 Install](#en-install)
+  - [🚀 Run Locally](#en-locally)
+  - [📋 Run Unit Tests](#en-unit-tests)
+  - [📔 Run Storybook](#en-storybook)
+- [📂 Structure](#en-structure)
+
+#### <a id='en-about' style='text-decoration: none; color: inherit;'>❕ About</a>
+This is my implementation of the challenge project "Coffee Delivery" from the second ReactJS module of [Ignite](https://www.rocketseat.com.br/ignite), an intermediate and advanced course in various programming languages and technologies offered by [Rocketseat](https://www.rocketseat.com.br/).
+
+It implements the following functionalities, which will be demonstrated in photos and videos later on:
+##### **Home screen**
+- **Coffee listing:** Shows a coffee catalog to be added to the cart
+- **Choose amount:** Subtracts or increments the amount of coffees to be added to the cart
+##### **Checkout screen**
+- **Change amount:** Subtracts or increments the amount of coffees in the cart
+- **Remove coffees:** Remove coffees from the cart
+- **Delivery address:** Informs the address to receive the delivery, informing the CEP, other fields are automatically fulfilled, like street, neighborhood, city and state
+- **Payment methods:** Choose what payment will be used for the delivery, between the options of credit card, debit card and cash
+##### **Conclusion screen**
+- **Delivery confirmation:** Shows a resume of where it will be delivered, the payment method and the time estimative
+
+#### <a id='en-instructions' style='text-decoration: none; color: inherit;'>📖 Instructions</a>
+##### <a id='en-instalar' style='text-decoration: none; color: inherit;'>📥 Install</a>
+Paste the 1º command into a terminal opened within a folder of your preference to clone the project, then run one of the versions of the 2º command to install the dependencies
+```sh
+git clone https://github.com/mar-alv/ignite-coffee-delivery.git
+npm i # Or npm install
+```
+
+##### <a id='en-locally' style='text-decoration: none; color: inherit;'>🚀 Run Locally</a>
+Paste the command into a terminal, the application will be accessable through this [link](http://localhost:5173)
+```sh
+npm run dev
+```
+
+##### <a id='en-unit-tests' style='text-decoration: none; color: inherit;'>📋 Run Unit Tests</a>
+Paste the command into a terminal, they will be exectued one after the other mentioning if there were failed tests
+```sh
+npm run tests
+```
+
+##### <a id='en-storybook' style='text-decoration: none; color: inherit;'>📔 Run Storybook</a>
+Paste the command into a terminal, the project's components documentation will be accessible through this [link](http://localhost:6006)
+```sh
+npm run storybook
+```
+
+#### <a id='en-structure' style='text-decoration: none; color: inherit;'>📂 Structure</a>
+```
+│ .github/
+│   └── ... images and gifs used in this documentation
+│ .storybook/
+│   └── ... files to keep Storybook working
+│ .tests/
+│   └── ... files to keep tests working
+│ src/
+│   ├── assets/
+│   │     └── ... images used
+│   ├── components/
+│   │     ├── context x/
+│   │     │     ├── component y/
+│   │     │     │     ├── index.tsx
+│   │     │     │     └── styles.ts
+│   │     │     └── ...
+│   │     └── ...
+│   ├── contexts/
+│   │     └── ... actions, contexts and providers
+│   ├── enums/
+│   │     └── ... used enums
+│   ├── interfaces/
+│   │     └── ... used interfaces
+│   ├── pages/
+│   │     ├── page x/
+│   │     │     ├── component y/
+│   │     │     │     ├── index.tsx
+│   │     │     │     └── styles.ts
+│   │     └──   └── ...
+│   ├── styles/
+│   │     └── ... global styles and default theme
+│   ├── utils/
+│   │     └── ... util functions used
+│   └── ...
+│ stories/
+│   ├── components/
+│   │     ├── context x/
+│   │     │     └── ... stories of the components
+│   │     └── ...
+│   ├── ... generic stories (color, icons e typography)
+│   └── ... stories-utils.tsx // util functions for stories
+│ tests/
+│   ├── contexto x/
+│   |		  └── ... unit tests
+│   ├── ...
+│   └── ... tests-utils.tsx // util functions for tests
+```
 
 ## <a id='pt-br' style='text-decoration: none; color: inherit;'>🇧🇷 Português</a>
 
@@ -113,106 +214,6 @@ npm run storybook
 │   └── ... tests-utils.tsx // funções utilitárias pros testes
 ```
 
-## <a id='en' style='text-decoration: none; color: inherit;'>🇬🇧 English</a>
-
-### 📚 Summary
-- [❕ About](#en-about)
-- [📖 Instructions](#en-instructions)
-  - [📥 Install](#en-install)
-  - [🚀 Run Locally](#en-locally)
-  - [📋 Run Unit Tests](#en-unit-tests)
-  - [📔 Run Storybook](#en-storybook)
-- [📂 Structure](#en-structure)
-
-#### <a id='en-about' style='text-decoration: none; color: inherit;'>❕ About</a>
-This is my implementation of the challenge project "Coffee Delivery" from the second ReactJS module of [Ignite](https://www.rocketseat.com.br/ignite), an intermediate and advanced course in various programming languages and technologies offered by [Rocketseat](https://www.rocketseat.com.br/).
-
-It implements the following functionalities, which will be demonstrated in photos and videos later on:
-##### **Home screen**
-- **Coffee listing:** Shows a coffee catalog to be added to the cart
-- **Choose amount:** Subtracts or increments the amount of coffees to be added to the cart
-##### **Checkout screen**
-- **Change amount:** Subtracts or increments the amount of coffees in the cart
-- **Remove coffees:** Remove coffees from the cart
-- **Delivery address:** Informs the address to receive the delivery, informing the CEP, other fields are automatically fulfilled, like street, neighborhood, city and state
-- **Payment methods:** Choose what payment will be used for the delivery, between the options of credit card, debit card and cash
-##### **Conclusion screen**
-- **Delivery confirmation:** Shows a resume of where it will be delivered, the payment method and the time estimative
-
-#### <a id='en-instructions' style='text-decoration: none; color: inherit;'>📖 Instructions</a>
-##### <a id='en-instalar' style='text-decoration: none; color: inherit;'>📥 Install</a>
-Paste the 1º command into a terminal opened within a folder of your preference to clone the project, then run one of the versions of the 2º command to install the dependencies
-```sh
-git clone https://github.com/mar-alv/ignite-coffee-delivery.git
-npm i # Or npm install
-```
-
-##### <a id='en-locally' style='text-decoration: none; color: inherit;'>🚀 Run Locally</a>
-Paste the command into a terminal, the application will be accessable through this [link](http://localhost:5173)
-```sh
-npm run dev
-```
-
-##### <a id='en-unit-tests' style='text-decoration: none; color: inherit;'>📋 Run Unit Tests</a>
-Paste the command into a terminal, they will be exectued one after the other mentioning if there were failed tests
-```sh
-npm run tests
-```
-
-##### <a id='en-storybook' style='text-decoration: none; color: inherit;'>📔 Run Storybook</a>
-Paste the command into a terminal, the project's components documentation will be accessible through this [link](http://localhost:6006)
-```sh
-npm run storybook
-```
-
-#### <a id='en-structure' style='text-decoration: none; color: inherit;'>📂 Structure</a>
-```
-│ .github/
-│   └── ... images and gifs used in this documentation
-│ .storybook/
-│   └── ... files to keep Storybook working
-│ .tests/
-│   └── ... files to keep tests working
-│ src/
-│   ├── assets/
-│   │     └── ... images used
-│   ├── components/
-│   │     ├── context x/
-│   │     │     ├── component y/
-│   │     │     │     ├── index.tsx
-│   │     │     │     └── styles.ts
-│   │     │     └── ...
-│   │     └── ...
-│   ├── contexts/
-│   │     └── ... actions, contexts and providers
-│   ├── enums/
-│   │     └── ... used enums
-│   ├── interfaces/
-│   │     └── ... used interfaces
-│   ├── pages/
-│   │     ├── page x/
-│   │     │     ├── component y/
-│   │     │     │     ├── index.tsx
-│   │     │     │     └── styles.ts
-│   │     └──   └── ...
-│   ├── styles/
-│   │     └── ... global styles and default theme
-│   ├── utils/
-│   │     └── ... util functions used
-│   └── ...
-│ stories/
-│   ├── components/
-│   │     ├── context x/
-│   │     │     └── ... stories of the components
-│   │     └── ...
-│   ├── ... generic stories (color, icons e typography)
-│   └── ... stories-utils.tsx // util functions for stories
-│ tests/
-│   ├── contexto x/
-│   |		  └── ... unit tests
-│   ├── ...
-│   └── ... tests-utils.tsx // util functions for tests
-```
 
 ## 🧰 Technologies
 ### Build Tools
