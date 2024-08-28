@@ -120,32 +120,31 @@ npm run storybook
 │   └── ...
 ```
 
-## <a id='technologies' style='text-decoration: none; color: inherit;'>🧰 Technologies</a>
-### Build Tools
+### <a id='technologies' style='text-decoration: none; color: inherit;'>🧰 Technologies</a>
+#### Build Tools
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 
-### Documentation
+#### Documentation
 [![Storybook](https://img.shields.io/badge/Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white)](https://storybook.js.org/)
 
-### Front-end Framework
+#### Front-end Framework
 [![React.js](https://img.shields.io/badge/React.js-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org/)
 [![React Router DOM](https://img.shields.io/badge/React%20Router%20DOM-61DAFB?style=for-the-badge&logo=react-router&logoColor=white&color=red)](https://reactrouter.com/en/main)
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 
-### Styling
+#### Styling
 [![Phosphor Icons](https://img.shields.io/badge/Phosphor%20Icons-c4e456?style=for-the-badge&logo=phosphoricons&logoColor=black)](https://phosphoricons.com/)
 [![Styled-Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)](https://styled-components.com/)
 
-### Utilities
+#### Utilities
 [![React Hook Form](https://img.shields.io/badge/React_Hook_Form-FF6B6B?style=for-the-badge&logo=react&logoColor=white)](https://react-hook-form.com/)
 
-### Testing
+#### Testing
 [![React Testing Library](https://img.shields.io/badge/React%20Testing%20Library-E33332?style=for-the-badge&logo=testing-library&logoColor=white)](https://testing-library.com/docs/react-testing-library/intro)
 [![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white)](https://jestjs.io/)
 
-## <a id='screenshots-prints' style='text-decoration: none; color: inherit;'>📸 Screenshots and 🎥 Recordings</a>
-For a longer video demonstration click here and like my post on
-<a href='https://www.linkedin.com/posts/marcelo-dos-santos-alvarez-474406180_my-code-solution-for-coffee-delivery-a-challenge-activity-7078453723521253376-7vWp/'>LinkedIn</a>
+### <a id='screenshots-prints' style='text-decoration: none; color: inherit;'>📸 Screenshots and 🎥 Recordings</a>
+For a longer video demonstration click here and like my post on <a href='https://www.linkedin.com/posts/marcelo-dos-santos-alvarez-474406180_my-code-solution-for-coffee-delivery-a-challenge-activity-7078453723521253376-7vWp/'>LinkedIn</a>
 
 <div align='center'>
 
@@ -217,7 +216,7 @@ For a longer video demonstration click here and like my post on
 
 </div>
 
-## <a id='author' style='text-decoration: none; color: inherit;'>👤 Author</a>
+### <a id='author' style='text-decoration: none; color: inherit;'>👤 Author</a>
 <div style='display: flex; align-items: center;'>
 		<img src='https://github.com/mar-alv.png' alt='Marcelo Alvarez GitHub profile picture' style='width: 150px; border-radius: 50%; margin-right: 20px;'>
 		<div>
@@ -240,5 +239,5 @@ For a longer video demonstration click here and like my post on
 		</div>
 </div>
 
-## <a id='license' style='text-decoration: none; color: inherit;'>📄 License</a>
+### <a id='license' style='text-decoration: none; color: inherit;'>📄 License</a>
 Licensed under [MIT](./LICENSE)

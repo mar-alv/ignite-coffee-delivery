@@ -2,7 +2,7 @@
 
 <div align='center'>
 
-  ![project-img](./.github/cover.jpg)
+  ![project-img](../.github/cover.jpg)
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 
@@ -121,104 +121,103 @@ npm run storybook
 │   └── ...
 ```
 
-## <a id='technologies' style='text-decoration: none; color: inherit;'>🧰 Tecnologias</a>
-### Build
+### <a id='technologies' style='text-decoration: none; color: inherit;'>🧰 Tecnologias</a>
+#### Build
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 
-### Documentação
+#### Documentação
 [![Storybook](https://img.shields.io/badge/Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white)](https://storybook.js.org/)
 
-### Framework Front-end
+#### Framework Front-end
 [![React.js](https://img.shields.io/badge/React.js-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org/)
 [![React Router DOM](https://img.shields.io/badge/React%20Router%20DOM-61DAFB?style=for-the-badge&logo=react-router&logoColor=white&color=red)](https://reactrouter.com/en/main)
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 
-### Estilização
+#### Estilização
 [![Phosphor Icons](https://img.shields.io/badge/Phosphor%20Icons-c4e456?style=for-the-badge&logo=phosphoricons&logoColor=black)](https://phosphoricons.com/)
 [![Styled-Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)](https://styled-components.com/)
 
-### Testes
+#### Testes
 [![React Testing Library](https://img.shields.io/badge/React%20Testing%20Library-E33332?style=for-the-badge&logo=testing-library&logoColor=white)](https://testing-library.com/docs/react-testing-library/intro)
 [![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white)](https://jestjs.io/)
 
-### Utilidades
+#### Utilidades
 [![React Hook Form](https://img.shields.io/badge/React_Hook_Form-FF6B6B?style=for-the-badge&logo=react&logoColor=white)](https://react-hook-form.com/)
 
-## <a id='screenshots-prints' style='text-decoration: none; color: inherit;'>📸 Prints e 🎥 Gravações</a>
-For a longer video demonstration click here and like my post on
-<a href='https://www.linkedin.com/posts/marcelo-dos-santos-alvarez-474406180_my-code-solution-for-coffee-delivery-a-challenge-activity-7078453723521253376-7vWp/'>LinkedIn</a>
+### <a id='screenshots-prints' style='text-decoration: none; color: inherit;'>📸 Prints e 🎥 Gravações</a>
+Para uma demonstração mais longa clique aqui e curta meu post no <a href='https://www.linkedin.com/posts/marcelo-dos-santos-alvarez-474406180_my-code-solution-for-coffee-delivery-a-challenge-activity-7078453723521253376-7vWp/'>LinkedIn</a>
 
 <div align='center'>
 
-  ![home](./.github/home.gif)
-	Home screen
+  ![home](../.github/home.gif)
+	Tela inicial
 
 </div>
 
 <div align='center'>
 
-  ![adding-coffee](./.github/adding-coffee.gif)
-	Adding coffee
+  ![adding-coffee](../.github/adding-coffee.gif)
+	Adicionando café
 
 </div>
 
 <div align='center'>
 
-  ![removing-coffee](./.github/removing-coffee.gif)
-	Removing coffee
+  ![removing-coffee](../.github/removing-coffee.gif)
+	Removendo café
 
 </div>
 
 <div align='center'>
 
-  ![choosing-payment-method](./.github/choosing-payment-method.gif)
-	Choosing payment method
+  ![choosing-payment-method](../.github/choosing-payment-method.gif)
+	Escolhendo forma de pagamento
 
 </div>
 
 <div align='center'>
 
-  ![filling-delivery-address](./.github/filling-delivery-address.gif)
-	Filling delivery address
+  ![filling-delivery-address](../.github/filling-delivery-address.gif)
+	Preenchendo endereço de entrega
 
 </div>
 
 <div align='center'>
 
-  ![confirming-delivery](./.github/confirming-delivery.gif)
-	Confirming delivery
+  ![confirming-delivery](../.github/confirming-delivery.gif)
+	Confirmando entrega
 
 </div>
 
 <div align='center'>
 
-  ![generic-stories](./.github/generic-stories.gif)
-	Generic stories
+  ![generic-stories](../.github/generic-stories.gif)
+	Stories genéricos
 
 </div>
 
 <div align='center'>
 
-  ![checkout-stories](./.github/checkout-stories.gif)
-	Checkout stories
+  ![checkout-stories](../.github/checkout-stories.gif)
+	Stories da tela de pagamento
 
 </div>
 
 <div align='center'>
 
-  ![common-stories](./.github/common-stories.gif)
-	Common stories
+  ![common-stories](../.github/common-stories.gif)
+	Stories genéricos
 
 </div>
 
 <div align='center'>
 
-  ![home-stories](./.github/home-stories.gif)
-	Home stories
+  ![home-stories](../.github/home-stories.gif)
+	Stories da tela inicial
 
 </div>
 
-## <a id='author' style='text-decoration: none; color: inherit;'>👤 Autor</a>
+### <a id='author' style='text-decoration: none; color: inherit;'>👤 Autor</a>
 <div style='display: flex; align-items: center;'>
 		<img src='https://github.com/mar-alv.png' alt='Marcelo Alvarez GitHub profile picture' style='width: 150px; border-radius: 50%; margin-right: 20px;'>
 		<div>
@@ -241,5 +240,5 @@ For a longer video demonstration click here and like my post on
 		</div>
 </div>
 
-## <a id='license' style='text-decoration: none; color: inherit;'>📄 Licença</a>
+### <a id='license' style='text-decoration: none; color: inherit;'>📄 Licença</a>
 Licenciado via [MIT](../LICENSE)
